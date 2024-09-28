@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nakul Garg - Publications</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Academicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+
+    <!-- Custom styles -->
+    <link href="files/jumbotron.css" rel="stylesheet">
+
+    <style>
+        .fa.fa-twitter {
+            font-family: sans-serif;
+        }
+        .fa.fa-twitter::before {
+            content: "𝕏";
+            font-size: 1.2em;
+        }
+        .publication {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .publication-image {
+            width: 100%; /* Ensures consistent width */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 200px; /* Ensures image is not too tall */
+            object-fit: cover; /* Ensures image is cropped if necessary */
+            margin-bottom: 15px;
+        }
+        .publication-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .authors {
+            margin-bottom: 5px;
+        }
+        .venue {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .award {
+            color: #9c0000;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-9">
+
+                <!-- Reuse the Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid" style="width: 80%;">
+                        <a class="navbar-brand" href="./index.html">Nakul Garg</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html#news">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./publications.html">Publications</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <div class="container-fluid" id="pub" style="width: 80%; margin-top: 50px;">
+                    <h4 style="margin-top: 30px;">Publications</h4>
+                
+                    <div id="pubs">
+                        <!-- The publication entries will be populated here via JavaScript -->
+                    </div>
+                </div>
+
+
+                 
+                <!-- Script to dynamically load the JSON data and generate the publication entries -->
+                <script>
+
+                    // Retrieve the publications data from localStorage
+                    const publications = JSON.parse(localStorage.getItem('publications'));
+
+                    function displayPublications() {
+                        const pubContainer = document.getElementById('pubs');
+                        
+                            publications.forEach(pub => {
+                                // Create the publication row
+                                const pubDiv = document.createElement('div');
+                                pubDiv.classList.add('row');
+                                pubDiv.style.marginTop = '30px';
+
+                                // Generate authors list
+                                const authorsList = pub.authors.join(', ');
+
+                                // Create inner HTML for the publication entry
+                                pubDiv.innerHTML = `
+                                    <div class="col-md-4">
+                                        <img class="publication-image" src="${pub.image}" alt="${pub.title}">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p><strong>${pub.title}</strong></p>
+                                        <div><strong>${authorsList}</strong></div>
+                                        <div><i>${pub.venue}</i></div>
+                                        <div>
+                                            ${pub.links.map(link => `<a href="${link.url}">[${link.text}]</a>`).join(' ')}
+                                        </div>
+                                        ${pub.awards.length > 0 ? `<div style="color:#9c0000;"><strong>${pub.awards.join(', ')}</strong></div>` : ''}
+                                    </div>
+                                `;
+                                
+                                // Append the publication to the container
+                                pubContainer.appendChild(pubDiv);
+                            });
+                    }
+
+                    // Call the function to display publications when the DOM content is fully loaded
+                    document.addEventListener("DOMContentLoaded", displayPublications);
+                    
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-3">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Nakul Garg</span>
+        </div>
+    </footer>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+</html>
