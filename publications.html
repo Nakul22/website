@@ -18,16 +18,22 @@
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
         .publication {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: row;
         }
         .publication-image {
-            width: 100%;
-            height: auto;
-            max-height: 200px;
+            width: 200px;
+            height: 150px;
             object-fit: cover;
-            margin-bottom: 15px;
+        }
+        .publication-content {
+            flex: 1;
+            padding: 20px;
         }
         .publication-title {
             font-weight: bold;
@@ -97,38 +103,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function displayPublications() {
-            const pubContainer = document.getElementById('pubs');
-            const publications = JSON.parse(localStorage.getItem('publications'));
+        const pubContainer = document.getElementById('pubs');
+        const publications = JSON.parse(localStorage.getItem('publications'));
 
-            publications.forEach(pub => {
-                const pubDiv = document.createElement('div');
-                pubDiv.classList.add('publication', 'row');
+        publications.forEach(pub => {
+            const pubDiv = document.createElement('div');
+            pubDiv.classList.add('publication', 'row');
 
-                const authorsList = pub.authors.map(author => 
-                    author.includes("N. Garg") ? `<strong>${author}</strong>` : author
-                ).join(', ');
+            const authorsList = pub.authors.map(author => 
+                author.includes("N. Garg") ? `<strong>${author}</strong>` : author
+            ).join(', ');
 
-                pubDiv.innerHTML = `
-                    <div class="col-md-4">
-                        <img class="publication-image" src="${pub.image}" alt="${pub.title}">
+            pubDiv.innerHTML = `
+                <div class="col-md-4">
+                    <img class="publication-image" src="${pub.image}" alt="${pub.title}">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="publication-title">${pub.title}</h3>
+                    <p class="authors">${authorsList}</p>
+                    <p class="venue">${pub.venue}</p>
+                    <div class="links">
+                        ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join(' ')}
                     </div>
-                    <div class="col-md-8">
-                        <h3 class="publication-title">${pub.title}</h3>
-                        <p class="authors">${authorsList}</p>
-                        <p class="venue">${pub.venue}</p>
-                        <div class="links">
-                            ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join(' ')}
-                        </div>
-                        ${pub.awards.length > 0 ? `<p class="award">${pub.awards.join(', ')}</p>` : ''}
-                    </div>
-                `;
-                
-                pubContainer.appendChild(pubDiv);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", displayPublications);
+                    ${pub.awards.length > 0 ? `<p class="award">${pub.awards.join(', ')}</p>` : ''}
+                </div>
+            `;
+            
+            pubContainer.appendChild(pubDiv);
+        });
     </script>
 </body>
 </html>

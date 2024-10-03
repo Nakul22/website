@@ -19,34 +19,50 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333333;
+            --light-bg-color: #f5f5f5;
+            --white: #ffffff;
+            --highlight-color: #e74c3c;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
             padding-top: 70px;
         }
         .navbar {
-            background-color: #f8f9fa;
+            background-color: var(--white);
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            padding: 10px 0;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
         }
         .profile-section {
-            background-color: #f8f9fa;
+            background-color: var(--light-bg-color);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,.1);
         }
         .profile-image {
             border-radius: 20%;
-            max-width: 250px;
+            max-width: 300px;
         }
         .social-icons a {
-            color: #333;
+            color: var(--secondary-color);
             margin: 0 10px;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
         .social-icons a:hover {
-            color: #0056b3;
+            color: var(--accent-color);
         }
         .content-section {
             padding: 20px;
@@ -141,48 +157,122 @@
             text-decoration: underline;
         }
         .name {
-            color: #0056b3;
+            color: var(--primary-color);
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
         .position {
-            color: #333;
+            color: var(--secondary-color);
             font-size: 1.5rem;
             margin-bottom: 0.25rem;
         }
         .affiliation {
-            color: #555;
+            color: var(--secondary-color);
             font-size: 1.25rem;
             margin-bottom: 0.25rem;
         }
         .email a {
-            color: #0056b3;
+            color: var(--accent-color);
             text-decoration: none;
         }
         .email a:hover {
             text-decoration: underline;
         }
         .section-title {
-            color: #0056b3;
+            color: var(--primary-color);
             font-size: 1.75rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            border-bottom: 2px solid #0056b3;
+            border-bottom: 2px solid var(--primary-color);
             padding-bottom: 0.5rem;
         }
         .interest-group {
             margin-bottom: 1rem;
         }
         .interest-type {
-            color: #333;
+            color: var(--secondary-color);
             font-weight: bold;
             margin-bottom: 0.25rem;
         }
         .job-market-notice {
             font-size: 1.1rem;
-            color: #9c0000;
+            color: var(--highlight-color);
             font-weight: bold;
+        }
+        #publications {
+            margin-top: 3rem;
+        }
+
+        .publication-item {
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem 0 1rem 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .publication-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        .pub-venue {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-awards {
+            margin-bottom: 0.5rem;
+        }
+
+        .award-badge {
+            display: inline-block;
+            background-color: var(--highlight-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .pub-authors strong {
+            font-weight: 600;
+        }
+
+        .pub-links {
+            margin-top: 0.5rem;
+        }
+
+        .pub-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .pub-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -192,6 +282,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
+            <a class="navbar-brand" href="#home">Nakul Garg</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -261,13 +352,13 @@
             <ul>
                 <li>Co-chairing a <a href="https://s32024.smartnets.yale.edu/index.html">workshop</a> at MobiCom 2024. Feel free to preregister <a href="https://www.sigmobile.org/mobicom/2024/registration.html">here</a>!</li>
                 <li>Honored with the <a href="https://marconisociety.org/ys-bio/nakul-garg-2024/">Marconi Society Young Scholar Award</a>.</li>
-                <li>Received the Distinguished Artifact Reviewer Award at MobiSys 2024.</li>
                 <li>Named a <a href="https://risingstars.linklab.virginia.edu/2024/participants/nakul-garg.html">CPS Rising Star</a> for 2024.</li>
+                <li>Received the Distinguished Artifact Reviewer Award at MobiSys 2024.</li>
                 <li>Project SPiDR selected for the ACM SIGMOBILE Research Highlight.</li>
                 <li>Project Sirius awarded <a href="https://www.sigmobile.org/mobisys/2023/">Best Poster</a> at MobiSys 2023.</li>
                 <li>Awarded the <a href="https://www.cs.umd.edu/article/2024/04/three-phd-students-honored-ann-g-wylie-dissertation-fellowship">Ann G. Wylie Dissertation Fellowship</a>.</li>
                 <li>Received the UMD Future Faculty Fellowship.</li>
-                <li>Received the Outstanding Graduate Assistant Award.</li>
+                <li>Received the Outstanding Teaching Assistant Award.</li>
                 <li>Project SPiDR received the <a href="https://www.sigmobile.org/mobisys/2022/">Best Paper Award</a> at MobiSys 2022.</li>
                 <li>Project Owlet received the <a href="https://www.sigmobile.org/mobisys/2021/">Best Demo Award</a> at MobiSys 2021.</li>
                 <li>Project Owlet featured on <a href="https://dl.acm.org/newsletter/sigmobile-getmobile">ACM GetMobile</a> cover.</li>
@@ -280,15 +371,9 @@
         </div>
 
         <div id="publications" class="mt-5">
-            <div class="publications-header">
-                <h2>Publications</h2>
-                <a href="publications.html" class="full-list-btn">Full List</a>
-            </div>
-            <div class="row" id="pub-container">
+            <h2 class="section-title">Publications</h2>
+            <div id="pub-list">
                 <!-- Publications will be dynamically inserted here -->
-            </div>
-            <div class="text-center mt-4">
-                <a href="publications.html" class="full-list-btn">View Full Publications List</a>
             </div>
         </div>
     </div>
@@ -305,7 +390,7 @@
                     {
                         title: "Large Network UWB Localization: Algorithms and Implementation",
                         authors: ["N. Garg", "I. Shahid", "R. K. Sheshadri", "K. Sundaresan", "N. Roy"],
-                        venue: "USENIX NSDI, 2025",
+                        venue: "NSDI 2025",
                         image: "./assets/overview_figures/locate3d.png",
                         links: [
                             { text: "Paper", url: "#" },
@@ -318,7 +403,7 @@
                     {
                         title: "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals",
                         authors: ["N. Garg", "A. Ghosh", "N. Roy"],
-                        venue: "ACM Sensys, 2024",
+                        venue: "Sensys 2024",
                         image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
                         links: [
                             { text: "Paper", url: "#" }, // Update with actual link when available
@@ -330,7 +415,7 @@
                     {
                         title: "Sirius: A Self-Localization System for Resource-Constrained IoT Sensors",
                         authors: ["N. Garg", "N. Roy"],
-                        venue: "ACM Mobisys, 2023",
+                        venue: "Mobisys 2023",
                         image: "./assets/overview_figures/sirius.png",
                         links: [
                             { text: "Paper", url: "assets/papers/sirius_mobisys2023_nakul.pdf" },
@@ -342,8 +427,8 @@
                     },
                     {
                         title: "SPiDR: Ultra-low-power Acoustic Spatial Sensing for Micro-robot Navigation",
-                        authors: ["Y. Bai", "N. Garg (co-primary)", "N. Roy"],
-                        venue: "ACM Mobisys, 2022",
+                        authors: ["N. Garg<sup>*</sup>", "Y. Bai<sup>*</sup>", "N. Roy"],
+                        venue: "Mobisys 2022",
                         image: "./assets/overview_figures/spidr.png",
                         links: [
                             { text: "Paper", url: "assets/papers/spidr_mobisys2022_nakul.pdf" },
@@ -355,8 +440,8 @@
                     },
                     {
                         title: "Owlet: Enabling Spatial Information in Ubiquitous Acoustic Devices",
-                        authors: ["N. Garg", "Y. Bai (co-primary)", "N. Roy"],
-                        venue: "ACM Mobisys, 2021",
+                        authors: ["N. Garg<sup>*</sup>", "Y. Bai<sup>*</sup>", "N. Roy"],
+                        venue: "Mobisys, 2021",
                         image: "./assets/overview_figures/owlet.png",
                         links: [
                             { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
@@ -370,7 +455,7 @@
                     {
                         title: "Enabling Self-defense in Small Drones",
                         authors: ["N. Garg", "N. Roy"],
-                        venue: "ACM HotMobile, 2020",
+                        venue: "HotMobile 2020",
                         image: "./assets/overview_figures/dopplerdodge.png",
                         links: [
                             { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
@@ -382,7 +467,7 @@
                     {
                         title: "Structure Assisted Spectrum Sensing for Low-power Acoustic Event Detection",
                         authors: ["N. Garg", "H. Takawale", "Y. Bai", "I. Shahid", "N. Roy"],
-                        venue: "ACM IASA CPS IoT Week, 2023",
+                        venue: "IASA CPS IoT Week, 2023",
                         image: "./assets/overview_figures/lyra.png",
                         links: [
                             { text: "Paper", url: "assets/papers/lyra_iasa_cpsiotweek2023_nakul.pdf" },
@@ -393,7 +478,7 @@
                     {
                         title: "ThermWare: Towards Side-channel Defense for Tiny IoT Devices",
                         authors: ["N. Garg", "I. Shahid", "E. Avllazagaj", "J. Hill", "J. Han", "N. Roy"],
-                        venue: "ACM HotMobile, 2023",
+                        venue: "HotMobile 2023",
                         image: "./assets/overview_figures/thermware.png",
                         links: [
                             { text: "Paper", url: "assets/papers/thermware_hotmobile23_nakul.pdf" },
@@ -404,7 +489,7 @@
                     {
                         title: "VoiceFind: Noise-Resilient Speech Recovery in Commodity Headphones",
                         authors: ["I. Shahid", "Y. Bai", "N. Garg", "N. Roy"],
-                        venue: "ACM IASA Mobisys, 2022",
+                        venue: "IASA Mobisys, 2022",
                         image: "./assets/overview_figures/voicefind.png",
                         links: [
                             { text: "Paper", url: "assets/papers/voicefind_iasa_mobisys2022_nakul.pdf" }
@@ -413,40 +498,32 @@
                     }
                     ];
 
-function createPublicationCard(pub) {
+function createPublicationItem(pub) {
     const boldAuthors = pub.authors.map(author => 
         author.includes("N. Garg") ? `<strong>${author}</strong>` : author
-    );
+    ).join(', ');
 
     return `
-        <div class="col-md-6 col-lg-4">
-            <div class="pub-card">
-                <div class="pub-image" style="background-image: url('${pub.image}')"></div>
-                <div class="pub-content">
-                    <div class="pub-title">${pub.title}</div>
-                    <div class="pub-authors">${boldAuthors.join(', ')}</div>
-                    <div class="pub-venue">${pub.venue}</div>
-                    <div class="pub-links">
-                        ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join('')}
-                    </div>
-                    <div class="pub-awards">
-                        ${pub.awards.map(award => `<span class="award-badge">${award}</span>`).join('')}
-                    </div>
+        <div class="publication-item">
+            <div class="pub-venue">${pub.venue}</div>
+            <div class="pub-title">${pub.title}</div>
+            ${pub.awards.length > 0 ? `
+                <div class="pub-awards">
+                    ${pub.awards.map(award => `<span class="award-badge">${award}</span>`).join('')}
                 </div>
+            ` : ''}
+            <div class="pub-authors">${boldAuthors}</div>
+            <div class="pub-links">
+                ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join('')}
             </div>
         </div>
     `;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('pub-container');
+    const container = document.getElementById('pub-list');
     publications.forEach(pub => {
-        container.innerHTML += createPublicationCard(pub);
-    });
-
-    const bgColor = getComputedStyle(document.body).backgroundColor;
-    document.querySelectorAll('.pub-image').forEach(img => {
-        img.style.backgroundColor = bgColor;
+        container.innerHTML += createPublicationItem(pub);
     });
 });
 </script>
