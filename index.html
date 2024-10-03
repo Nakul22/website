@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -14,456 +13,442 @@
     </script>
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Nakul Garg</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Academicons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-
-    <!-- Custom styles -->
-    <link href="files/jumbotron.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakul Garg - Computer Science PhD Candidate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        .fa.fa-twitter {
-            font-family: sans-serif;
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 70px;
         }
-        .fa.fa-twitter::before {
-            content: "𝕏";
-            font-size: 1.2em;
+        .navbar {
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .profile-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+        .profile-image {
+            border-radius: 20%;
+            max-width: 250px;
+        }
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+        .content-section {
+            padding: 20px;
+        }
+        .pub-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .pub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        .pub-image {
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .pub-content {
+            padding: 20px;
+        }
+        .pub-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .pub-authors {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .pub-venue {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .pub-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .pub-awards {
+            margin-top: 10px;
+        }
+        .award-badge {
+            display: inline-block;
+            background-color: #9c0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .full-list-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: transparent;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        .full-list-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .publications-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .profile-section {
+                text-align: center;
+            }
+            .profile-info {
+                margin-top: 20px;
+            }
+        }
+        .cv-link {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .name {
+            color: #0056b3;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .position {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .affiliation {
+            color: #555;
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .email a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .email a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            color: #0056b3;
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 0.5rem;
+        }
+        .interest-group {
+            margin-bottom: 1rem;
+        }
+        .interest-type {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        .job-market-notice {
+            font-size: 1.1rem;
+            color: #9c0000;
+            font-weight: bold;
         }
     </style>
-
-    <script src="js/main.js"></script>
-    <script src="js/scroll.js"></script>
-    <!-- <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            showPubs(0); // Set the initial state to select 0 when the page loads
-        });
-    </script> -->
 </head>
 
 <body>
-<style>
-    body {
-        padding: 0;
-    }
-</style>
-<!-- nav-bar -->
 
-<!-- body -->
-
-    <script>
-        const publications = [
-            {
-                title: "Large Network UWB Localization: Algorithms and Implementation",
-                authors: ["N. Garg", "I. Shahid", "R. K. Sheshadri", "K. Sundaresan", "N. Roy"],
-                venue: "USENIX NSDI, 2025",
-                image: "./assets/overview_figures/locate3d.png",
-                links: [
-                    { text: "Paper", url: "#" },
-                    { text: "Video", url: "#" },
-                    { text: "Code", url: "#" },
-                    { text: "Dataset", url: "#" }
-                ],
-                awards: []
-            },
-            {
-                title: "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals",
-                authors: ["N. Garg", "A. Ghosh", "N. Roy"],
-                venue: "ACM Sensys, 2024",
-                image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
-                links: [
-                    { text: "Paper", url: "#" }, // Update with actual link when available
-                    { text: "Code", url: "#" },  // Update with actual link when available
-                    { text: "Video", url: "#" }  // Update with actual link when available
-                ],
-                awards: []
-            },
-            {
-                title: "Sirius: A Self-Localization System for Resource-Constrained IoT Sensors",
-                authors: ["N. Garg", "N. Roy"],
-                venue: "ACM Mobisys, 2023",
-                image: "./assets/overview_figures/sirius.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/sirius_mobisys2023_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_sirius_mobisys23.pptx" },
-                    { text: "Video", url: "https://youtu.be/JdCDbBUeu74" },
-                    { text: "Code", url: "https://github.com/Nakul22/Sirius" }
-                ],
-                awards: ["Best Poster Award"]
-            },
-            {
-                title: "SPiDR: Ultra-low-power Acoustic Spatial Sensing for Micro-robot Navigation",
-                authors: ["Y. Bai", "N. Garg (co-primary)", "N. Roy"],
-                venue: "ACM Mobisys, 2022",
-                image: "./assets/overview_figures/spidr.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/spidr_mobisys2022_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_spidr_mobisys22.pptx" },
-                    { text: "Video", url: "https://youtu.be/CoYIpEEFOxY" },
-                    { text: "Code", url: "https://github.com/Nakul22/Spidr_Mobisys22" }
-                ],
-                awards: ["Best Paper Award", "Communications of the ACM", "SIGMOBILE Research Highlight"]
-            },
-            {
-                title: "Owlet: Enabling Spatial Information in Ubiquitous Acoustic Devices",
-                authors: ["N. Garg", "Y. Bai (co-primary)", "N. Roy"],
-                venue: "ACM Mobisys, 2021",
-                image: "./assets/overview_figures/owlet.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
-                    { text: "Video", url: "https://youtu.be/pQqwYSWLHug" },
-                    { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
-                    { text: "Code", url: "https://github.com/Nakul22/Owlet_Mobisys21" }
-                ],
-                awards: ["Best Demo Award", "ACM GetMobile Cover"]
-            },
-            {
-                title: "Enabling Self-defense in Small Drones",
-                authors: ["N. Garg", "N. Roy"],
-                venue: "ACM HotMobile, 2020",
-                image: "./assets/overview_figures/dopplerdodge.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
-                    { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
-                ],
-                awards: []
-            },
-            {
-                title: "Structure Assisted Spectrum Sensing for Low-power Acoustic Event Detection",
-                authors: ["N. Garg", "H. Takawale", "Y. Bai", "I. Shahid", "N. Roy"],
-                venue: "ACM IASA CPS IoT Week, 2023",
-                image: "./assets/overview_figures/lyra.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/lyra_iasa_cpsiotweek2023_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_lyra_iasa23.pptx" }
-                ],
-                awards: []
-            },
-            {
-                title: "ThermWare: Towards Side-channel Defense for Tiny IoT Devices",
-                authors: ["N. Garg", "I. Shahid", "E. Avllazagaj", "J. Hill", "J. Han", "N. Roy"],
-                venue: "ACM HotMobile, 2023",
-                image: "./assets/overview_figures/thermware.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/thermware_hotmobile23_nakul.pdf" },
-                    { text: "Slides", url: "assets/papers/slides_thermware_hotmobile23.pptx" }
-                ],
-                awards: []
-            },
-            {
-                title: "VoiceFind: Noise-Resilient Speech Recovery in Commodity Headphones",
-                authors: ["I. Shahid", "Y. Bai", "N. Garg", "N. Roy"],
-                venue: "ACM IASA Mobisys, 2022",
-                image: "./assets/overview_figures/voicefind.png",
-                links: [
-                    { text: "Paper", url: "assets/papers/voicefind_iasa_mobisys2022_nakul.pdf" }
-                ],
-                awards: []
-            }
-        ];
-
-        // Store the publications data in localStorage
-        localStorage.setItem('publications', JSON.stringify(publications));
-
-    </script>
-
-<div class="container-fluid">
-    <div class="row justify-content-md-center">
-        <div class="col-9">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid" style="width: 80%;">
-                    <a class="navbar-brand" href="./index.html">Nakul Garg</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html#news">News</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html#pub">Publications</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Experience</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-            <div class="container-fluid" style="width: 80%;">
-                <div class="row" style="margin-top: 16px;">
-                    <div class="col-md-4" style="text-align: center;">
-                        <img src="assets/images/nakulgarg.jpg" alt="Profile Picture"
-                             style="max-height: 240px; max-width: 50%; border-radius: 100%;">
-                        <div style="margin-top: 5px;">Email: nakul22@umd.edu</div>
-                        <div>
-                            <i class="fas fa-file-alt"></i> <a href="assets/papers/nakulgarg_cv.pdf" target="_blank">CV</a> |
-                            <i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.co.in/citations?user=2YIGP0sAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                        </div>
-                        <div>
-                            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/gargnakul/" target="_blank">LinkedIn</a> |
-                            <i class="fa fa-twitter"></i> <a href="https://twitter.com/nakulgarg22" target="_blank"><s>twitter</s> X</a>
-                        </div>
-                    </div>
-                    <div class="col-md-8" style="margin-top: 10px;">
-                        <h3>Nakul Garg</h3>
-                        <div style="hyphens: auto">
-                            I am a Ph.D. candidate at 
-                            <a href="https://www.cs.umd.edu/" target="_blank">University of Maryland College Park</a> 
-                            working at <a href="http://icosmos.cs.umd.edu" target="_blank">iCoSMoS Lab</a> with 
-                            <a href="https://www.cs.umd.edu/~nirupam/" target="_blank">Prof. Nirupam Roy</a>. 
-                            My research interests are Ultra-low-power Sensing, Ambient Computing, 
-                            and Embedded AI.
-                            
-                            <br><br>
-                            
-                            <strong style="color:#9c0000">I am on the academic job market.</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- News -->
-            <div class="container-fluid" style="width: 80%;">
-                <h4 style="margin-top: 30px;" id="news">News</h4>
-                <ul>
-                    <li>Co-chairing a <a href="https://s32024.smartnets.yale.edu/index.html"> workshop</a> at MobiCom 2024. Feel free to preregister <a href="https://www.sigmobile.org/mobicom/2024/registration.html">here</a>!</li>
-                    <li>Honored with the <a href="https://marconisociety.org/ys-bio/nakul-garg-2024/">Marconi Society Young Scholar Award</a>.</li>
-                    <li>Received the Distinguished Artifact Reviewer Award at MobiSys 2024.</li>
-                    <li>Named a <a href="https://risingstars.linklab.virginia.edu/2024/participants/nakul-garg.html">CPS Rising Star</a> for 2024.</li>
-                    <li>Project SPiDR selected for the ACM SIGMOBILE Research Highlight.</li>
-                    <li>Project Sirius awarded <a href="https://www.sigmobile.org/mobisys/2023/">Best Poster</a> at MobiSys 2023.</li>
-                    <li>Awarded the <a href="https://www.cs.umd.edu/article/2024/04/three-phd-students-honored-ann-g-wylie-dissertation-fellowship">Ann G. Wylie Dissertation Fellowship</a>.</li>
-                    <li>Received the UMD Future Faculty Fellowship.</li>
-                    <li>Received the Outstanding Graduate Assistant Award.</li>
-                    <li>Project SPiDR received the <a href="https://www.sigmobile.org/mobisys/2022/">Best Paper Award</a> at MobiSys 2022.</li>
-                    <li>Project Owlet received the <a href="https://www.sigmobile.org/mobisys/2021/">Best Demo Award</a> at MobiSys 2021.</li>
-                    <li>Project Owlet featured on <a href="https://dl.acm.org/newsletter/sigmobile-getmobile">ACM GetMobile</a> cover.</li>
-                    <li>Awarded the University of Maryland Dean's Fellowship 2019.</li>
-                    <!-- <li>Received the President of India Award at World Food Hackathon.</li> -->
-                    <li>Awarded best project for Food Safety by President of India 2017.</li>
-                    <li>Team win selected as Celestini Project India recipient 2017.</li>
-                    <li>Awarded first place, eYantra robotics competition, IIT Bombay 2017.</li>
-                    <li>Awarded second place, eYantra robotics competition, IIT Bombay 2016.</li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
                 </ul>
-                <!-- <ul>
-                    <li>[10/2024] Organizing the <a href="https://s32024.smartnets.yale.edu/index.html">S3 workshop</a> at MobiCom 2024.</li>
-                    <li>[05/2024] Honored with the <a href="https://marconisociety.org/young-scholar-award/">Marconi Society Young Scholar Award</a>.</li>
-                    <li>[04/2024] Received the Distinguished Artifact Reviewer Award at ACM MobiSys 2024.</li>
-                    <li>[03/2024] Named a <a href="https://risingstars.linklab.virginia.edu/2024/participants/nakul-garg.html">CPS Rising Star</a> for 2024.</li>
-                    <li>[12/2023] SPiDR selected for the ACM SIGMOBILE Research Highlight.</li>
-                    <li>[06/2023] Sirius awarded <a href="https://www.sigmobile.org/mobisys/2023/">Best Poster</a> at MobiSys 2023.</li>
-                    <li>[04/2023] Awarded the <a href="https://www.cs.umd.edu/article/2024/04/three-phd-students-honored-ann-g-wylie-dissertation-fellowship">Ann G. Wylie Dissertation Fellowship</a>.</li>
-                    <li>[03/2023] Selected for the Clark School Future Faculty Program.</li>
-                    <li>[01/2023] Received the Outstanding Graduate Assistant Award.</li>
-                    <li>[06/2022] SPiDR won <a href="https://www.sigmobile.org/mobisys/2022/">Best Paper Award</a> at MobiSys 2022.</li>
-                    <li>[06/2021] Owlet received <a href="https://www.sigmobile.org/mobisys/2021/">Best Demo Award</a> at MobiSys 2021.</li>
-                    <li>[06/2021] Owlet featured on <a href="https://dl.acm.org/newsletter/sigmobile-getmobile">ACM GetMobile</a> cover.</li>
-                    <li>[09/2019] Awarded the University of Maryland Dean's Fellowship.</li>
-                    <li>[08/2017] Received the President of India Award at World Food Hackathon.</li>
-                    <li>[07/2017] Led winning team in Celestini Project India.</li>
-                    <li>[03/2017] First place, eYantra national robotics competition, IIT Bombay.</li>
-                    <li>[03/2016] Second prize, eYantra national robotics competition, IIT Bombay.</li>
-                </ul> -->
             </div>
+        </div>
+    </nav>
 
-
-             <!-- <div class="center" style="margin-top: 30px;"> -->
-             <!-- <div class="center"> -->
-            <!-- <div class="container-fluid " style="width: 80%; margin-top: 50px;"> -->
-                <!-- <h4 style="margin-top: 30px;">Research Overview</h4> -->
-                <!-- <div style="display: flex; justify-content: center;"> -->
-                    <!-- <img src="./image/overview2.png" alt="research overview" style="max-width: 70%; max-height: 250px;"> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-
-
-
-            <!-- Publications -->
-            <style>
-                .pub-card {
-                    transition: all 0.3s ease;
-                    border: 1px solid #e0e0e0;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    margin-bottom: 20px;
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                }
-                .pub-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-                }
-                .pub-image {
-                    width: 100%;
-                    height: 0;
-                    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-                    background-size: contain;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-color: #ffffff; /* Matches website background - change if needed */
-                }
-                .pub-content {
-                    padding: 20px;
-                }
-                .pub-title {
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-                .pub-authors {
-                    font-size: 14px;
-                    color: #555;
-                    margin-bottom: 10px;
-                }
-                .pub-venue {
-                    font-style: italic;
-                    margin-bottom: 10px;
-                }
-                .pub-links a {
-                    display: inline-block;
-                    margin-right: 10px;
-                    color: #0066cc;
-                    text-decoration: none;
-                }
-                .pub-awards {
-                    margin-top: 10px;
-                }
-                .award-badge {
-                    display: inline-block;
-                    background-color: #9c0000;
-                    color: white;
-                    padding: 3px 8px;
-                    border-radius: 12px;
-                    font-size: 12px;
-                    margin-right: 5px;
-                    margin-bottom: 5px;
-                }
-                .full-list-btn {
-                    display: inline-block;
-                    padding: 8px 16px;
-                    background-color: transparent;
-                    color: #333;
-                    text-decoration: none;
-                    border: 1px solid #333;
-                    border-radius: 4px;
-                    transition: all 0.3s ease;
-                    font-size: 14px;
-                }
-
-                .full-list-btn:hover {
-                    background-color: #333;
-                    color: #fff;
-                }
-
-                .publications-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 30px;
-                }
-            </style>
-            
-            <div class="container-fluid" id="pub" style="width: 80%; margin-top: 50px;">
-                <!-- Option 1: Button next to heading -->
-                <div class="publications-header">
-                    <h2>Publications</h2>
-                    <a href="publications.html" class="full-list-btn">Full List</a>
+    <div class="container mt-4" id="home">
+        <div class="profile-section">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="assets/images/nakul_headshot_umd.jpg" alt="Nakul Garg" class="profile-image img-fluid mb-3">
+                    <div class="social-icons d-flex justify-content-center">
+                        <a href="assets/papers/nakulgarg_cv.pdf" target="_blank" title="CV" class="me-3">
+                            <span class="cv-link">CV</span>
+                        </a>
+                        <a href="https://scholar.google.co.in/citations?user=2YIGP0sAAAAJ&hl=en" target="_blank" title="Google Scholar" class="me-3"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://www.linkedin.com/in/gargnakul/" target="_blank" title="LinkedIn" class="me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/nakulgarg22" target="_blank" title="Twitter" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/nakul22/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-            
-                <div class="row" id="pub-container">
-                    <!-- Publications will be dynamically inserted here -->
-                </div>
-            
-                <!-- Option 2: Button below cards -->
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="publications.html" class="full-list-btn">View Full Publications List</a>
-                </div>
-            </div>
-            
-            <script>
-                function createPublicationCard(pub) {
-                    const boldAuthors = pub.authors.map(author => 
-                        author.includes("N. Garg") ? `<strong>${author}</strong>` : author
-                    );
-
-                    return `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="pub-card">
-                                <div class="pub-image" style="background-image: url('${pub.image}')"></div>
-                                <div class="pub-content">
-                                    <div class="pub-title">${pub.title}</div>
-                                    <div class="pub-authors">${boldAuthors.join(', ')}</div>
-                                    <div class="pub-venue">${pub.venue}</div>
-                                    <div class="pub-links">
-                                        ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join('')}
-                                    </div>
-                                    <div class="pub-awards">
-                                        ${pub.awards.map(award => `<span class="award-badge">${award}</span>`).join('')}
-                                    </div>
-                                </div>
+                <div class="col-md-8 profile-info">
+                    <h1 class="name">Nakul Garg</h1>
+                    <h3 class="position">PhD Candidate, Computer Science</h3>
+                    <h4 class="affiliation">University of Maryland</h4>
+                    <p class="email"><a href="mailto:nakul22@umd.edu">nakul22@umd.edu</a></p>
+                    
+                    <div class="research-interests mt-4">
+                        <h3 class="section-title">Research Interests</h3>
+                        <div class="interests-container">
+                            <div class="interest-group">
+                                <h5 class="interest-type">Core:</h5>
+                                <p>Ambient Intelligence, Wireless Networking, Low-power Sensing, Embedded AI</p>
+                            </div>
+                            <div class="interest-group">
+                                <h5 class="interest-type">Applications:</h5>
+                                <p>Healthcare, Wearables, Smart Infrastructure, Robotics, Precision Farming</p>
                             </div>
                         </div>
-                    `;
-                }
+                    </div>
+                    
+                    <p class="job-market-notice mt-4">
+                        <strong>I am on the academic job market.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    const container = document.getElementById('pub-container');
-                    publications.forEach(pub => {
-                        container.innerHTML += createPublicationCard(pub);
-                    });
+        <div class="container-fluid" id="news">
+            <h4 class="mt-5">News</h4>
+            <ul>
+                <li>Co-chairing a <a href="https://s32024.smartnets.yale.edu/index.html">workshop</a> at MobiCom 2024. Feel free to preregister <a href="https://www.sigmobile.org/mobicom/2024/registration.html">here</a>!</li>
+                <li>Honored with the <a href="https://marconisociety.org/ys-bio/nakul-garg-2024/">Marconi Society Young Scholar Award</a>.</li>
+                <li>Received the Distinguished Artifact Reviewer Award at MobiSys 2024.</li>
+                <li>Named a <a href="https://risingstars.linklab.virginia.edu/2024/participants/nakul-garg.html">CPS Rising Star</a> for 2024.</li>
+                <li>Project SPiDR selected for the ACM SIGMOBILE Research Highlight.</li>
+                <li>Project Sirius awarded <a href="https://www.sigmobile.org/mobisys/2023/">Best Poster</a> at MobiSys 2023.</li>
+                <li>Awarded the <a href="https://www.cs.umd.edu/article/2024/04/three-phd-students-honored-ann-g-wylie-dissertation-fellowship">Ann G. Wylie Dissertation Fellowship</a>.</li>
+                <li>Received the UMD Future Faculty Fellowship.</li>
+                <li>Received the Outstanding Graduate Assistant Award.</li>
+                <li>Project SPiDR received the <a href="https://www.sigmobile.org/mobisys/2022/">Best Paper Award</a> at MobiSys 2022.</li>
+                <li>Project Owlet received the <a href="https://www.sigmobile.org/mobisys/2021/">Best Demo Award</a> at MobiSys 2021.</li>
+                <li>Project Owlet featured on <a href="https://dl.acm.org/newsletter/sigmobile-getmobile">ACM GetMobile</a> cover.</li>
+                <li>Awarded the University of Maryland Dean's Fellowship 2019.</li>
+                <li>Awarded best project for Food Safety by President of India 2017.</li>
+                <li>Team win selected as Celestini Project India recipient 2017.</li>
+                <li>Awarded first place, eYantra robotics competition, IIT Bombay 2017.</li>
+                <li>Awarded second place, eYantra robotics competition, IIT Bombay 2016.</li>
+            </ul>
+        </div>
 
-                    // Get the background color of the body (or any parent element)
-                    const bgColor = getComputedStyle(document.body).backgroundColor;
-
-                    // Set this color as the background for all pub-image elements
-                    document.querySelectorAll('.pub-image').forEach(img => {
-                        img.style.backgroundColor = bgColor;
-                    });
-                });
-            </script>
-
-<div style="height: 50px;"></div>
-    
-<!-- Footer -->
-<footer class="footer bg-light py-3">
-    <div class="container text-center">
-        <span class="text-muted">© 2024 Nakul Garg</span>
+        <div id="publications" class="mt-5">
+            <div class="publications-header">
+                <h2>Publications</h2>
+                <a href="publications.html" class="full-list-btn">Full List</a>
+            </div>
+            <div class="row" id="pub-container">
+                <!-- Publications will be dynamically inserted here -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="publications.html" class="full-list-btn">View Full Publications List</a>
+            </div>
+        </div>
     </div>
-</footer>
 
+    <footer class="footer bg-light py-3 mt-5">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Nakul Garg</span>
+        </div>
+    </footer>
 
-<!--  <script>var scroll = new SmoothScroll('a[href*="#"]', {speed: 1000});</script>-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const publications = [
+                    {
+                        title: "Large Network UWB Localization: Algorithms and Implementation",
+                        authors: ["N. Garg", "I. Shahid", "R. K. Sheshadri", "K. Sundaresan", "N. Roy"],
+                        venue: "USENIX NSDI, 2025",
+                        image: "./assets/overview_figures/locate3d.png",
+                        links: [
+                            { text: "Paper", url: "#" },
+                            { text: "Video", url: "#" },
+                            { text: "Code", url: "#" },
+                            { text: "Dataset", url: "#" }
+                        ],
+                        awards: []
+                    },
+                    {
+                        title: "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals",
+                        authors: ["N. Garg", "A. Ghosh", "N. Roy"],
+                        venue: "ACM Sensys, 2024",
+                        image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
+                        links: [
+                            { text: "Paper", url: "#" }, // Update with actual link when available
+                            { text: "Code", url: "#" },  // Update with actual link when available
+                            { text: "Video", url: "#" }  // Update with actual link when available
+                        ],
+                        awards: []
+                    },
+                    {
+                        title: "Sirius: A Self-Localization System for Resource-Constrained IoT Sensors",
+                        authors: ["N. Garg", "N. Roy"],
+                        venue: "ACM Mobisys, 2023",
+                        image: "./assets/overview_figures/sirius.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/sirius_mobisys2023_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_sirius_mobisys23.pptx" },
+                            { text: "Video", url: "https://youtu.be/JdCDbBUeu74" },
+                            { text: "Code", url: "https://github.com/Nakul22/Sirius" }
+                        ],
+                        awards: ["Best Poster Award"]
+                    },
+                    {
+                        title: "SPiDR: Ultra-low-power Acoustic Spatial Sensing for Micro-robot Navigation",
+                        authors: ["Y. Bai", "N. Garg (co-primary)", "N. Roy"],
+                        venue: "ACM Mobisys, 2022",
+                        image: "./assets/overview_figures/spidr.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/spidr_mobisys2022_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_spidr_mobisys22.pptx" },
+                            { text: "Video", url: "https://youtu.be/CoYIpEEFOxY" },
+                            { text: "Code", url: "https://github.com/Nakul22/Spidr_Mobisys22" }
+                        ],
+                        awards: ["Best Paper Award", "Communications of the ACM", "SIGMOBILE Research Highlight"]
+                    },
+                    {
+                        title: "Owlet: Enabling Spatial Information in Ubiquitous Acoustic Devices",
+                        authors: ["N. Garg", "Y. Bai (co-primary)", "N. Roy"],
+                        venue: "ACM Mobisys, 2021",
+                        image: "./assets/overview_figures/owlet.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
+                            { text: "Video", url: "https://youtu.be/pQqwYSWLHug" },
+                            { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
+                            { text: "Code", url: "https://github.com/Nakul22/Owlet_Mobisys21" }
+                        ],
+                        awards: ["Best Demo Award", "ACM GetMobile Cover"]
+                    },
+                    {
+                        title: "Enabling Self-defense in Small Drones",
+                        authors: ["N. Garg", "N. Roy"],
+                        venue: "ACM HotMobile, 2020",
+                        image: "./assets/overview_figures/dopplerdodge.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
+                            { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
+                        ],
+                        awards: []
+                    },
+                    {
+                        title: "Structure Assisted Spectrum Sensing for Low-power Acoustic Event Detection",
+                        authors: ["N. Garg", "H. Takawale", "Y. Bai", "I. Shahid", "N. Roy"],
+                        venue: "ACM IASA CPS IoT Week, 2023",
+                        image: "./assets/overview_figures/lyra.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/lyra_iasa_cpsiotweek2023_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_lyra_iasa23.pptx" }
+                        ],
+                        awards: []
+                    },
+                    {
+                        title: "ThermWare: Towards Side-channel Defense for Tiny IoT Devices",
+                        authors: ["N. Garg", "I. Shahid", "E. Avllazagaj", "J. Hill", "J. Han", "N. Roy"],
+                        venue: "ACM HotMobile, 2023",
+                        image: "./assets/overview_figures/thermware.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/thermware_hotmobile23_nakul.pdf" },
+                            { text: "Slides", url: "assets/papers/slides_thermware_hotmobile23.pptx" }
+                        ],
+                        awards: []
+                    },
+                    {
+                        title: "VoiceFind: Noise-Resilient Speech Recovery in Commodity Headphones",
+                        authors: ["I. Shahid", "Y. Bai", "N. Garg", "N. Roy"],
+                        venue: "ACM IASA Mobisys, 2022",
+                        image: "./assets/overview_figures/voicefind.png",
+                        links: [
+                            { text: "Paper", url: "assets/papers/voicefind_iasa_mobisys2022_nakul.pdf" }
+                        ],
+                        awards: []
+                    }
+                    ];
 
+function createPublicationCard(pub) {
+    const boldAuthors = pub.authors.map(author => 
+        author.includes("N. Garg") ? `<strong>${author}</strong>` : author
+    );
+
+    return `
+        <div class="col-md-6 col-lg-4">
+            <div class="pub-card">
+                <div class="pub-image" style="background-image: url('${pub.image}')"></div>
+                <div class="pub-content">
+                    <div class="pub-title">${pub.title}</div>
+                    <div class="pub-authors">${boldAuthors.join(', ')}</div>
+                    <div class="pub-venue">${pub.venue}</div>
+                    <div class="pub-links">
+                        ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join('')}
+                    </div>
+                    <div class="pub-awards">
+                        ${pub.awards.map(award => `<span class="award-badge">${award}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('pub-container');
+    publications.forEach(pub => {
+        container.innerHTML += createPublicationCard(pub);
+    });
+
+    const bgColor = getComputedStyle(document.body).backgroundColor;
+    document.querySelectorAll('.pub-image').forEach(img => {
+        img.style.backgroundColor = bgColor;
+    });
+});
+</script>
 </body>
-
 </html>
