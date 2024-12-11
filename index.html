@@ -16,308 +16,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nakul Garg - Computer Science PhD Candidate</title>
+
+    <meta name="description" content="Nakul Garg - PhD Candidate in Computer Science at University of Maryland, researching Ambient Intelligence, Wireless Networking, and Low-power Sensing">
+    <meta name="keywords" content="Nakul Garg, Computer Science, UMD, Wireless Networking, Ambient Intelligence, Low-power Sensing">
+    <meta name="author" content="Nakul Garg">
+
+    <!-- For social media sharing -->
+    <meta property="og:title" content="Nakul Garg - Computer Science PhD Candidate">
+    <meta property="og:description" content="Research in Ambient Intelligence, Wireless Networking, and Low-power Sensing">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    
+    <!-- Add your profile image URL -->
+    <meta property="og:image" content="assets/images/nakul_headshot_umd.jpg">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333333;
-            --light-bg-color: #f5f5f5;
-            --white: #ffffff;
-            --highlight-color: #e74c3c;
-        }
+    <!-- Optimize font awesome loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/styles.css">
 
-        html {
-            scroll-padding-top: 70px; /* Adjust this value to match your header height */
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            padding-top: 70px;
-        }
-        .navbar {
-            background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-            padding: 10px 0;
-        }
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        .profile-section {
-            background-color: var(--light-bg-color);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,.1);
-            margin-bottom: 2rem;
-        }
-        .profile-image {
-            border-radius: 20%;
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-        .social-icons a {
-            color: var(--secondary-color);
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-        .content-section {
-            padding: 20px;
-        }
-        .pub-card {
-            transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .pub-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-        .pub-image {
-            width: 100%;
-            height: 0;
-            padding-top: 56.25%;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .pub-content {
-            padding: 20px;
-        }
-        .pub-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .pub-authors {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .pub-venue {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .pub-links a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .pub-awards {
-            margin-top: 10px;
-        }
-        .award-badge {
-            display: inline-block;
-            background-color: #9c0000;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-        .full-list-btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: transparent;
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #333;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-        .full-list-btn:hover {
-            background-color: #333;
-            color: #fff;
-        }
-        .publications-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        @media (max-width: 768px) {
-            .profile-section {
-                text-align: center;
-                padding: 15px;
-            }
-            .profile-info {
-                margin-top: 20px;
-                padding: 0 15px;
-            }
-            .profile-image {
-                max-width: 200px;
-                margin-bottom: 1rem;
-            }
-            .social-icons {
-                margin-bottom: 1.5rem;
-            }
-            .name {
-                font-size: 2rem;
-            }
-            .position {
-                font-size: 1.25rem;
-            }
-            .affiliation {
-                font-size: 1.1rem;
-            }
-        }
-        .cv-link {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .name {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        .position {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin-bottom: 0.25rem;
-        }
-        .affiliation {
-            color: var(--secondary-color);
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        .email a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        .email a:hover {
-            text-decoration: underline;
-        }
-        .section-title {
-            color: var(--primary-color);
-            font-size: 1.75rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
-        .interest-group {
-            margin-bottom: 1rem;
-        }
-        .interest-type {
-            color: var(--secondary-color);
-            font-weight: bold;
-            margin-bottom: 0.25rem;
-        }
-        .job-market-notice {
-            font-size: 1.1rem;
-            color: var(--highlight-color);
-            font-weight: bold;
-        }
-        #publications {
-            margin-top: 3rem;
-        }
-
-        .publication-item {
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem 0 1rem 1.5rem;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .publication-item::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-        }
-
-        .pub-venue {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .pub-title {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .pub-awards {
-            margin-bottom: 0.5rem;
-        }
-
-        .award-badge {
-            display: inline-block;
-            background-color: var(--highlight-color);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-        }
-
-        .pub-authors {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-
-        .pub-authors strong {
-            font-weight: 600;
-        }
-
-        .pub-links {
-            margin-top: 0.5rem;
-        }
-
-        .pub-links a {
-            display: inline-block;
-            margin-right: 10px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .pub-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 
 <body>
     <div id="home"></div>
 
     <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Nakul Garg</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#home" aria-label="Home">Nakul Garg</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" aria-current="location">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#news">News</a>
@@ -338,12 +76,20 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="assets/images/nakul_headshot_umd.jpg" alt="Nakul Garg" class="profile-image img-fluid">
+                        <img src="assets/images/nakul_headshot_umd.jpg" alt="Nakul Garg" class="profile-image img-fluid" loading="eager">
                         <div class="social-icons d-flex justify-content-center mt-3">
-                            <a href="https://scholar.google.co.in/citations?user=2YIGP0sAAAAJ&hl=en" target="_blank" title="Google Scholar" class="me-3"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://www.linkedin.com/in/gargnakul/" target="_blank" title="LinkedIn" class="me-3"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://twitter.com/nakulgarg22" target="_blank" title="Twitter" class="me-3"><i class="fab fa-twitter"></i></a>
-                            <a href="https://github.com/nakul22/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://scholar.google.co.in/citations?user=2YIGP0sAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gargnakul/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/nakulgarg22" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/nakul22/" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -366,20 +112,23 @@
                             </div>
                         </div>
                     </div>
-                    <p class="job-market-notice mt-1">
-                        <strong>I am on the academic job market.</strong><br>
-                        <a href="assets/papers/nakulgarg_cv.pdf" target="_blank">CV</a> |
-                        <a href="assets/package/research_statement_nakul_garg.pdf" target="_blank">Research Statement</a> |
-                        <a href="assets/package/teaching_statement_nakul_garg.pdf" target="_blank">Teaching Statement</a> |
-                        <a href="assets/package/diversity_statement_nakul_garg.pdf" target="_blank">Diversity Statement</a>
-                    </p>
+                    <div class="job-market-notice mt-1 profile-links">
+                        <strong>I am on the job market.</strong>
+                        <div class="market-links">
+                            <a href="assets/papers/nakulgarg_cv.pdf" target="_blank">CV</a> |
+                            <a href="assets/package/research_statement_nakul_garg.pdf" target="_blank">Research Statement</a> |
+                            <a href="assets/package/teaching_statement_nakul_garg.pdf" target="_blank">Teaching Statement</a> |
+                            <a href="assets/package/diversity_statement_nakul_garg.pdf" target="_blank">Diversity Statement</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid" id="news">
-            <h4 class="mt-5">News</h4>
-            <ul>
+
+        <section id="news" class="container-fluid">
+            <h2 class="mt-5">News</h2>
+            <ul class="news-list">
                 <li>Project LiTEfoot received the <a href="https://sensys.acm.org/2024/demos/">Best Poster Runner-Up Award</a> at SenSys 2024.</li>
                 <li>Co-chairing the <a href="https://s32024.smartnets.yale.edu/index.html">S3 workshop</a> at MobiCom 2024. Feel free to preregister <a href="https://www.sigmobile.org/mobicom/2024/registration.html">here</a>!</li>
                 <li>Honored with the <a href="https://marconisociety.org/ys-bio/nakul-garg-2024/">Marconi Society Young Scholar Award</a>.</li>
@@ -389,7 +138,7 @@
                 <li>Project Sirius awarded <a href="https://www.sigmobile.org/mobisys/2023/">Best Poster</a> at MobiSys 2023.</li>
                 <li>Awarded the <a href="https://www.cs.umd.edu/article/2024/04/three-phd-students-honored-ann-g-wylie-dissertation-fellowship">Ann G. Wylie Dissertation Fellowship</a>.</li>
                 <li>Received the UMD Future Faculty Fellowship.</li>
-                <li>Received the Outstanding Teaching Assistant Award (top 2% of 4000+ TAs).</li>
+                <li>Received the Outstanding Teaching Assistant Award (top 2% of 2800+ TAs).</li>
                 <li>Project SPiDR received the <a href="https://www.sigmobile.org/mobisys/2022/">Best Paper Award</a> at MobiSys 2022.</li>
                 <li>Project Owlet received the <a href="https://www.sigmobile.org/mobisys/2021/">Best Demo Award</a> at MobiSys 2021.</li>
                 <li>Project Owlet featured on <a href="https://dl.acm.org/newsletter/sigmobile-getmobile">ACM GetMobile</a> cover.</li>
@@ -399,14 +148,15 @@
                 <li>Awarded first place, eYantra robotics competition, IIT Bombay 2017.</li>
                 <li>Awarded second place, eYantra robotics competition, IIT Bombay 2016.</li>
             </ul>
-        </div>
+        </section>
+        
 
-        <div id="publications" class="mt-5">
+        <section id="publications" class="mt-5">
             <h2 class="section-title">Publications</h2>
-            <div id="pub-list">
+            <div id="pub-list" role="list">
                 <!-- Publications will be dynamically inserted here -->
             </div>
-        </div>
+        </section>
     </div>
 
     <footer class="footer bg-light py-3 mt-5">
@@ -416,147 +166,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const publications = [
-                    {
-                        title: "Large Network UWB Localization: Algorithms and Implementation",
-                        authors: ["N. Garg", "I. Shahid", "R. K. Sheshadri", "K. Sundaresan", "N. Roy"],
-                        venue: "NSDI 2025",
-                        image: "./assets/overview_figures/locate3d.png",
-                        links: [
-                        { text: "Paper", url: "assets/papers/locate3d_nsdi2025_nakul.pdf" },
-                            // { text: "Video", url: "#" },
-                            // { text: "Code", url: "#" },
-                            // { text: "Dataset", url: "#" }
-                        ],
-                        awards: []
-                    },
-                    {
-                        title: "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals",
-                        authors: ["N. Garg", "A. Ghosh", "N. Roy"],
-                        venue: "Sensys 2024",
-                        image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
-                        links: [
-                        { text: "Paper", url: "assets/papers/litefoot_sensys2024_nakul.pdf" },
-                            // { text: "Code", url: "#" },  // Update with actual link when available
-                            // { text: "Video", url: "#" }  // Update with actual link when available
-                        ],
-                        awards: ["Best Poster Runner-up Award"]
-                    },
-                    {
-                        title: "Sirius: A Self-Localization System for Resource-Constrained IoT Sensors",
-                        authors: ["N. Garg", "N. Roy"],
-                        venue: "Mobisys 2023",
-                        image: "./assets/overview_figures/sirius.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/sirius_mobisys2023_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_sirius_mobisys23.pptx" },
-                            { text: "Video", url: "https://youtu.be/JdCDbBUeu74" },
-                            { text: "Code", url: "https://github.com/Nakul22/Sirius" }
-                        ],
-                        awards: ["Best Poster Award"]
-                    },
-                    {
-                        title: "SPiDR: Ultra-low-power Acoustic Spatial Sensing for Micro-robot Navigation",
-                        authors: ["N. Garg<sup>*</sup>", "Y. Bai<sup>*</sup>", "N. Roy"],
-                        venue: "Mobisys 2022",
-                        image: "./assets/overview_figures/spidr.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/spidr_mobisys2022_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_spidr_mobisys22.pptx" },
-                            { text: "Video", url: "https://youtu.be/CoYIpEEFOxY" },
-                            { text: "Code", url: "https://github.com/Nakul22/Spidr_Mobisys22" }
-                        ],
-                        awards: ["Best Paper Award", "Communications of the ACM", "SIGMOBILE Research Highlight"]
-                    },
-                    {
-                        title: "Owlet: Enabling Spatial Information in Ubiquitous Acoustic Devices",
-                        authors: ["N. Garg<sup>*</sup>", "Y. Bai<sup>*</sup>", "N. Roy"],
-                        venue: "Mobisys, 2021",
-                        image: "./assets/overview_figures/owlet.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
-                            { text: "Video", url: "https://youtu.be/pQqwYSWLHug" },
-                            { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
-                            { text: "Code", url: "https://github.com/Nakul22/Owlet_Mobisys21" }
-                        ],
-                        awards: ["Best Demo Award", "ACM GetMobile Cover"]
-                    },
-                    {
-                        title: "Enabling Self-defense in Small Drones",
-                        authors: ["N. Garg", "N. Roy"],
-                        venue: "HotMobile 2020",
-                        image: "./assets/overview_figures/dopplerdodge.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
-                            { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
-                        ],
-                        awards: []
-                    },
-                    {
-                        title: "Structure Assisted Spectrum Sensing for Low-power Acoustic Event Detection",
-                        authors: ["N. Garg", "H. Takawale", "Y. Bai", "I. Shahid", "N. Roy"],
-                        venue: "IASA CPS IoT Week, 2023",
-                        image: "./assets/overview_figures/lyra.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/lyra_iasa_cpsiotweek2023_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_lyra_iasa23.pptx" }
-                        ],
-                        awards: []
-                    },
-                    {
-                        title: "ThermWare: Towards Side-channel Defense for Tiny IoT Devices",
-                        authors: ["N. Garg", "I. Shahid", "E. Avllazagaj", "J. Hill", "J. Han", "N. Roy"],
-                        venue: "HotMobile 2023",
-                        image: "./assets/overview_figures/thermware.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/thermware_hotmobile23_nakul.pdf" },
-                            { text: "Slides", url: "assets/papers/slides_thermware_hotmobile23.pptx" }
-                        ],
-                        awards: []
-                    },
-                    {
-                        title: "VoiceFind: Noise-Resilient Speech Recovery in Commodity Headphones",
-                        authors: ["I. Shahid", "Y. Bai", "N. Garg", "N. Roy"],
-                        venue: "IASA Mobisys, 2022",
-                        image: "./assets/overview_figures/voicefind.png",
-                        links: [
-                            { text: "Paper", url: "assets/papers/voicefind_iasa_mobisys2022_nakul.pdf" }
-                        ],
-                        awards: []
-                    }
-                    ];
+    
+    <script src="js/publications.js" defer></script>
 
-function createPublicationItem(pub) {
-    const boldAuthors = pub.authors.map(author => 
-        author.includes("N. Garg") ? `<strong>${author}</strong>` : author
-    ).join(', ');
-
-    return `
-        <div class="publication-item">
-            <div class="pub-venue">${pub.venue}</div>
-            <div class="pub-title">${pub.title}</div>
-            ${pub.awards.length > 0 ? `
-                <div class="pub-awards">
-                    ${pub.awards.map(award => `<span class="award-badge">${award}</span>`).join('')}
-                </div>
-            ` : ''}
-            <div class="pub-authors">${boldAuthors}</div>
-            <div class="pub-links">
-                ${pub.links.map(link => `<a href="${link.url}" target="_blank">[${link.text}]</a>`).join('')}
-            </div>
-        </div>
-    `;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('pub-list');
-    publications.forEach(pub => {
-        container.innerHTML += createPublicationItem(pub);
-    });
-});
-</script>
 </body>
 </html>
