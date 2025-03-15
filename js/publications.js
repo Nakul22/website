@@ -19,6 +19,7 @@ const publications = [
         image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
         links: [
         { text: "Paper", url: "assets/papers/litefoot_sensys2024_nakul.pdf" },
+        { text: "Slides", url: "assets/papers/slides_litefoot_sensys24.pptx" },
             // { text: "Code", url: "#" },  // Update with actual link when available
             // { text: "Video", url: "#" }  // Update with actual link when available
         ],

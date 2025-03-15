@@ -63,6 +63,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#publications">Publications</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#awards">Awards</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#blog">Blog</a>
                     </li> -->
@@ -112,24 +115,64 @@
                             </div>
                         </div>
                     </div>
-                    <div class="job-market-notice mt-1 profile-links">
+                    
+                    <div class="job-market-notice profile-links">
                         <strong>I am on the job market.</strong>
-                        <div class="market-links">
+                        <!-- <div class="market-links">
                             <a href="assets/papers/nakulgarg_cv.pdf" target="_blank">CV</a> |
                             <a href="assets/package/research_statement_nakul_garg.pdf" target="_blank">Research Statement</a> |
                             <a href="assets/package/teaching_statement_nakul_garg.pdf" target="_blank">Teaching Statement</a> |
                             <a href="assets/package/diversity_statement_nakul_garg.pdf" target="_blank">Diversity Statement</a>
+                        </div> -->
+                        <div class="market-links">
+                            <a href="assets/papers/nakulgarg_cv.pdf" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="cv">CV</a> |
+                            <a href="assets/package/research_statement_nakul_garg.pdf" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="research_statement">Research Statement</a> |
+                            <a href="assets/package/teaching_statement_nakul_garg.pdf" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="teaching_statement">Teaching Statement</a> |
+                            <a href="assets/package/diversity_statement_nakul_garg.pdf" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="diversity_statement">Diversity Statement</a>
+                        </div>
+                        <div class="market-links">
+                            <!-- <a href="assets/package/tldr_package.pdf" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="cv">My Candid Introduction</a> | -->
+                            <a href="https://youtu.be/7HyQsXRYZdI" 
+                               target="_blank" 
+                               data-track="true" 
+                               data-document-id="research_statement">My research as a podcast</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Insert a picture here which spans the page -->
+        <!-- <div class="row mt-5">
+            <h2 class="mt-5">My Research</h2>
+            <div class="col text-center">
+                <img src="assets/overview_figures/my_overview_figure.png" alt="Nakul Garg" class="img-fluid mt-3" style="max-width: 75%;" loading="lazy">
+            </div>
+        </div> -->
 
         <section id="news" class="container-fluid">
             <h2 class="mt-5">News</h2>
             <ul class="news-list">
+                <!-- <li>Co-founded  <a href="https://deepharmoniq.com" target="_blank">DeepharmonIQ</a> - Physical intelligence coming soon.</li> -->
+                <li>Co-founded DeepharmonIQ - Physical intelligence coming soon.</li>
+                <li>Supported by <a href="https://new.nsf.gov/funding/initiatives/i-corps" target="_blank">NSF I-Corps</a> to build Next-Gen Wearables with Spatial Intelligence.</li>
                 <li>Project LiTEfoot received the <a href="https://sensys.acm.org/2024/demos/">Best Poster Runner-Up Award</a> at SenSys 2024.</li>
+                <li>Invited talk at EnSyS Workshop at SenSys 2024.</li>
                 <li>Co-chairing the <a href="https://s32024.smartnets.yale.edu/index.html">S3 workshop</a> at MobiCom 2024. Feel free to preregister <a href="https://www.sigmobile.org/mobicom/2024/registration.html">here</a>!</li>
                 <li>Honored with the <a href="https://marconisociety.org/ys-bio/nakul-garg-2024/">Marconi Society Young Scholar Award</a>.</li>
                 <li>Named a <a href="https://risingstars.linklab.virginia.edu/2024/participants/nakul-garg.html">Cyber-Physical Systems (CPS) Rising Star</a> for 2024.</li>
@@ -149,7 +192,6 @@
                 <li>Awarded second place, eYantra robotics competition, IIT Bombay 2016.</li>
             </ul>
         </section>
-        
 
         <section id="publications" class="mt-5">
             <h2 class="section-title">Publications</h2>
@@ -157,6 +199,14 @@
                 <!-- Publications will be dynamically inserted here -->
             </div>
         </section>
+
+        <section id="awards" class="section mt-5">
+            <h2 class="section-title">Awards</h2>
+            <div id="awards-list" role="list">
+                <!-- Awards will be populated by awards.js -->
+            </div>
+        </section>
+
     </div>
 
     <footer class="footer bg-light py-3 mt-5">
@@ -166,8 +216,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="js/awards.js" defer></script>
     <script src="js/publications.js" defer></script>
+    <script src="js/documentTracking.js"></script>
 
 </body>
 </html>

@@ -12,11 +12,12 @@
     --highlight-color: #9c0000;
     
     /* Spacing */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
+    /* Spacing */
+    --space-xs: 0.25rem; /* Extra small spacing */
+    --space-sm: 0.5rem;  /* Small spacing */
+    --space-md: 1rem;    /* Medium spacing */
+    --space-lg: 2rem;    /* Large spacing */
+    --space-xl: 3rem;    /* Extra large spacing */
     
     /* Font Sizes */
     --text-sm: 0.9rem;
@@ -84,24 +85,25 @@ body {
 .profile-info {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: 0.3rem;  /* Reduced from 0.5rem */
 }
 
 .research-interests {
-    margin-top: var(--space-md);
+    margin-top: 0.5rem;  /* Reduced from 1rem */
 }
 
 .interest-group {
-    margin-bottom: var(--space-md);
+    margin-bottom: 0.25rem;  /* Reduced from 1rem */
 }
 
 .profile-image {
-    border-radius: 20%;
+    border-radius: 5%;
     display: block;
     height: auto;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 250px; /* Reduced from 100% */
 }
+
 
 .social-icons a {
     color: var(--secondary-color);
@@ -400,6 +402,97 @@ body {
         margin: 0.15rem 0.5rem 0.15rem 0;
         font-size: 0.85rem;
     }
+
+    .award-image {
+        flex: 0 0 150px;
+    }
+    
+    .award-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* -----------------------------
+   Awards Section Styles
+----------------------------- */
+#awards {
+    margin-top: 3rem;
+}
+
+#awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: white;
+}
+
+.award-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.award-content {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.award-image {
+    flex: 0 0 200px;  /* Fixed width */
+    display: flex;
+    align-items: center;
+}
+
+.award-image img {
+    border-radius: 5%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;  /* This will ensure the image fills the space */
+}
+
+/* Optional hover effect */
+/* .award-image:hover img {
+    transform: scale(1.05);
+} */
+
+.award-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.award-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.award-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.award-title a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.award-year {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+.award-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* -----------------------------
@@ -407,29 +500,35 @@ body {
 ----------------------------- */
 .name {
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;  /* Reduced from 0.5rem */
 }
 
 .position {
     color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.1rem;  /* Reduced from 0.25rem */
 }
 
 .affiliation {
     color: var(--secondary-color);
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;  /* Reduced from 0.25rem */
 }
+
+.email {
+    margin-bottom: 0.5rem;  /* Added specific margin for email */
+}
+
+
 
 .section-title {
     border-bottom: 2px solid var(--primary-color);
     color: var(--primary-color);
-    font-size: 1.75rem;
+    font-size: 1.5rem;        /* Changed from 1.75rem */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
@@ -439,6 +538,11 @@ body {
 
 .job-market-notice {
     color: var(--highlight-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    margin-top: 0.0rem;
+}
+
+.market-links {
+    margin-top: 0.2rem;  /* Added small spacing for links */
 }
