@@ -1,5 +1,5 @@
 # Ignore the entire assets folder
-assets/
+# assets/
 
 # Ignore macOS .DS_Store files
 .DS_Store
