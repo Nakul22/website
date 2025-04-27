@@ -13,6 +13,19 @@ const publications = [
         awards: []
     },
     {
+        title: "Spatial Audio Processing with Large Language Model on Wearable Devices",
+        authors: ["A. Mishra", "Y. Bai", "P. Narayanasamy", "N. Garg", "N. Roy"],
+        venue: "arXiv 2025",
+        image: "./assets/overview_figures/spatial_audio_llm.png",
+        links: [
+            { text: "Paper", url: "https://arxiv.org/abs/2504.08907"},
+            // { text: "Slides", url: "assets/papers/slides_spatial_audio_llm.pptx" },
+            // { text: "Video", url: "https://youtu.be/2g0v1q3X4aE" },
+            // { text: "Code", url: "#" }
+        ],
+        awards: []
+    },
+    {
         title: "LiTEfoot: Ultra-low-power Localization using Ambient Cellular Signals",
         authors: ["N. Garg<sup>*</sup>", "A. Ghosh<sup>*</sup>", "N. Roy"],
         venue: "Sensys 2024",
