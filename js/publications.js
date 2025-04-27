@@ -32,7 +32,7 @@ const publications = [
         image: "./assets/overview_figures/litefoot.png", // You'll need to provide this image
         links: [
         { text: "Paper", url: "assets/papers/litefoot_sensys2024_nakul.pdf" },
-        { text: "Slides", url: "assets/papers/slides_litefoot_sensys24.pptx" },
+        // { text: "Slides", url: "assets/papers/slides_litefoot_sensys24.pptx" },
             // { text: "Code", url: "#" },  // Update with actual link when available
             // { text: "Video", url: "#" }  // Update with actual link when available
         ],
@@ -58,7 +58,7 @@ const publications = [
         image: "./assets/overview_figures/sirius.png",
         links: [
             { text: "Paper", url: "assets/papers/sirius_mobisys2023_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_sirius_mobisys23.pptx" },
+            // { text: "Slides", url: "assets/papers/slides_sirius_mobisys23.pptx" },
             { text: "Video", url: "https://youtu.be/JdCDbBUeu74" },
             { text: "Code", url: "https://github.com/Nakul22/Sirius" }
         ],
@@ -71,7 +71,7 @@ const publications = [
         image: "./assets/overview_figures/spidr.png",
         links: [
             { text: "Paper", url: "assets/papers/spidr_mobisys2022_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_spidr_mobisys22.pptx" },
+            // { text: "Slides", url: "assets/papers/slides_spidr_mobisys22.pptx" },
             { text: "Video", url: "https://youtu.be/CoYIpEEFOxY" },
             { text: "Code", url: "https://github.com/Nakul22/Spidr_Mobisys22" }
         ],
@@ -84,7 +84,7 @@ const publications = [
         image: "./assets/overview_figures/owlet.png",
         links: [
             { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
+            // { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
             { text: "Video", url: "https://youtu.be/pQqwYSWLHug" },
             { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
             { text: "Code", url: "https://github.com/Nakul22/Owlet_Mobisys21" }
@@ -98,7 +98,7 @@ const publications = [
         image: "./assets/overview_figures/dopplerdodge.png",
         links: [
             { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
+            // { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
             { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
         ],
         awards: []
@@ -110,7 +110,7 @@ const publications = [
         image: "./assets/overview_figures/lyra.png",
         links: [
             { text: "Paper", url: "assets/papers/lyra_iasa_cpsiotweek2023_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_lyra_iasa23.pptx" }
+            // { text: "Slides", url: "assets/papers/slides_lyra_iasa23.pptx" }
         ],
         awards: []
     },
@@ -121,7 +121,7 @@ const publications = [
         image: "./assets/overview_figures/thermware.png",
         links: [
             { text: "Paper", url: "assets/papers/thermware_hotmobile23_nakul.pdf" },
-            { text: "Slides", url: "assets/papers/slides_thermware_hotmobile23.pptx" }
+            // { text: "Slides", url: "assets/papers/slides_thermware_hotmobile23.pptx" }
         ],
         awards: []
     },
