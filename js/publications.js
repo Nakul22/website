@@ -15,7 +15,7 @@ const publications = [
     {
         title: "Spatial Audio Processing with Large Language Model on Wearable Devices",
         authors: ["A. Mishra", "Y. Bai", "P. Narayanasamy", "N. Garg", "N. Roy"],
-        venue: "arXiv 2025",
+        venue: "ICML 2025",
         image: "./assets/overview_figures/spatial_audio_llm.png",
         links: [
             { text: "Paper", url: "https://arxiv.org/abs/2504.08907"},
