@@ -13,7 +13,7 @@ const publications = [
         awards: []
     },
     {
-        title: "Spatial Audio Processing with Large Language Model on Wearable Devices",
+        title: "SING: Spatial Context in Large Language Model for Next-Gen Wearables",
         authors: ["A. Mishra", "Y. Bai", "P. Narayanasamy", "N. Garg", "N. Roy"],
         venue: "ICML 2025",
         image: "./assets/overview_figures/spatial_audio_llm.png",
