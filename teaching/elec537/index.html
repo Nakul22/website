@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELEC 537: Intelligent Mobile Systems</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- minimal highlight styles (does not change structure/columns) -->
+    <style>
+      .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;line-height:1;border:1px solid currentColor}
+      .pill.holiday{background:#fff1f1;color:#a40000;border-color:#ffc9c9}
+      .pill.exam{background:#eef3ff;color:#003a9b;border-color:#c7d7ff}
+      .pill.workshop{background:#eefd f3;color:#0a6c3a;border-color:#bff0d3}
+      tr.holiday-row td{background:#fff8f8}
+      tr.assessment-row td{background:#f6f9ff}
+      tr.workshop-row td{background:#f6fff8}
+    </style>
 </head>
 <body>
     <!-- ================================
          ELEC 537: INTELLIGENT MOBILE SYSTEMS
-         Course Website with Interactive Schedule
          ================================ -->
     <!-- Banner Image -->
     <!-- <div class="banner-container">
@@ -24,65 +33,40 @@
         <div class="info-section">
             <p><strong>Instructor:</strong> <a href="https://nakulg.com" class="website-link" target="_blank">Nakul Garg</a> (<a href="mailto:nakul@rice.edu" class="email-link">nakul@rice.edu</a>)</p>
             <p><strong>Lectures:</strong> Tu - Th, 4:00pm - 5:15pm</p>
-            <p><strong>Location:</strong> TBD</p>
-            <p><strong>TAs:</strong> TBD</p>
+            <p><strong>Location:</strong> James Baker Hall, 116</p>
+            <p><strong>TA:</strong> Bin Zhao</p>
             <p><strong>Office Hours:</strong> TBD</p>
         </div>
         
         <p><strong>Course Description.</strong> This course focuses on building intelligent mobile systems that sense, communicate, and make decisions under tight resource constraints like limited energy, compute, and bandwidth. We will explore wireless communication, embedded sensing, and machine learning techniques for mobile applications. Topics include wireless localization, sensor fusion, on-device AI, energy harvesting, wireless imaging, and emerging techniques like 3D mapping and neural radiance fields.</p>
     </div>
 
-    <!-- Add a prerequisites section saying This class is open to PhD and Master students as well as advanced undergraduate students -->
     <div class="info-section">
         <p><strong>Prerequisites:</strong> The course is open for graduate (PhD/Master's) and senior undergraduate students. Prior experience in embedded systems, wireless communication, and machine learning is recommended but not required.</p>
     </div>
 
-    <!-- <div class="projects-section">
-        <h3>Projects.</h3>
-        <p>Students will propose, design, and prototype an intelligent mobile system as part of a group project. Projects will focus on wireless sensing, energy-efficient embedded AI, and/or distributed learning on resource-constrained platforms. The project encourages creativity and innovation at the intersection of mobile computing, embedded AI, and networking.</p>
-        
-        <p><strong>Example project themes:</strong></p>
-        <ul class="project-themes">
-            <li>RF-based localization</li>
-            <li>Wireless imaging and 3D reconstruction</li>
-            <li>Acoustic communication underwater</li>
-            <li>Battery-free embedded inference</li>
-            <li>Federated learning in IoT</li>
-            <li>Side channel attacks and security</li>
-        </ul>
-    </div> -->
-
     <div class="resources-section">
         <h3>Topics.</h3>
         <ul>
-            <li><strong>Fundamentals of Signal Processing:</strong> Analyzing sensor data using Fourier transforms and time-frequency analysis.</li>
-            <li><strong>Wireless Communication & Ranging:</strong> Understanding wireless signals for communication, localization, ranging, and angle estimation.</li>
-            <li><strong>Advanced Wireless Imaging:</strong> Creating images from wireless signals using physics-informed AI, Neural Radiance Fields (NeRF), and diffusion models.</li>
-            <li><strong>On-Device AI & Optimization (TinyML):</strong> Implementing and optimizing efficient machine learning models for resource-constrained devices.</li>
-            <li><strong>Energy Harvesting & Intermittent Systems:</strong> Designing battery-free devices that compute using harvested energy.</li>
-            <li><strong>Acoustic Sensing Systems:</strong> Leveraging sound for tracking, ranging, and gesture recognition using techniques like Doppler and beamforming.</li>
-            <li><strong>Next-Generation Wireless:</strong> Investigating the future of sensing with 5G, millimeter-wave, Terahertz, and smart surfaces.</li>
-            <li><strong>Sensing for Robotics & AR/VR:</strong> Enabling perception for autonomous robots and immersive experiences in AR/VR.</li>
-            <li><strong>Mobile Health Sensing:</strong> Using smartphones and wearables to monitor physiological signals and create digital biomarkers.</li>
-            <li><strong>Security and Privacy:</strong> Building secure systems with privacy-by-design, and exploring side-channel atatcks.</li>
-            <li><strong>Large Language Models (LLMs):</strong> Integrating AI, LLMs and chatbots into intelligent mobile applications.</li>
+            <li><strong>Fundamentals of Signal Processing</strong></li>
+            <li><strong>Spatial Sensing & Computing</strong></li>
+            <li><strong>On-Device AI & Optimization (TinyML)</strong></li>
+            <li><strong>Applications & Intelligent Mobile Systems</strong></li>
         </ul>
     </div>
 
     <div class="assessment-section">
         <h3>Grading Breakdown.</h3>
         <ul class="assessment-list">
-            <li><strong>Assignments (25%)</strong> - 2-3 assignments covering wireless sensing, localization, and embedded AI</li>
+            <li><strong>Assignments (25%)</strong> - 2–3 assignments covering wireless sensing, localization, and embedded AI</li>
             <li><strong>Midterm (25%)</strong> - One open-book in-class midterm exam</li>
             <li><strong>Presentation (10%)</strong> - Student paper presentation</li>
-            <li><strong>Project (40%)</strong> - One semester-long group project (teams of 2-4)</li>
+            <li><strong>Project (40%)</strong> - One semester-long group project (teams of 2–4)</li>
         </ul>
     </div>
 
-
     <!-- ================================
          INTERACTIVE COURSE SCHEDULE
-         Click on any lecture title to expand details
          ================================ -->
     <div class="lectures-section">
         <div class="schedule-title">Schedule.</div>
@@ -98,505 +82,359 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Theme 1: Fundamentals of Signals and Systems -->
+                <!-- Theme 1: Foundations of Signals and Systems -->
                 <tr class="topic-header">
-                    <td colspan="5">FUNDAMENTALS OF SIGNALS AND SYSTEMS</td>
+                    <td colspan="5">FOUNDATIONS OF SIGNALS AND SYSTEMS</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">1</td>
                     <td class="date-cell">Aug 26</td>
                     <td class="topic-cell" onclick="toggleDetails(event, 1)">Introduction to Intelligent Mobile Systems</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
                     <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Main Paper 1</a></div>
-                        <div class="reading-main"><a href="#">Main Paper 2</a></div>
-                        <div class="reading-optional">Optional: Additional Reading</div>
+                        <div class="reading-main"><a href="http://ccr.sigcomm.org/online/files/p83-keshavA.pdf" target="_blank">How to read a paper</a></div>
                     </td>
                 </tr>
                 <tr id="details-1" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Course overview, logistics, and a high-level view of the topics. Introduction to IoT, mobile, and intelligent systems.</td>
+                    <td colspan="5" class="lecture-details-cell">Course overview, logistics, and a high-level view of the topics.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">2</td>
                     <td class="date-cell">Aug 28</td>
                     <td class="topic-cell" onclick="toggleDetails(event, 2)">Sensors and Signals</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Sensor Fundamentals Paper</a></div>
-                        <div class="reading-main"><a href="#">ADC & Sampling Theory</a></div>
-                        <div class="reading-optional">Optional: Signal Processing Basics</div>
-                    </td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-2" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Fundamentals of common sensors (IMU, acoustic, RF). Analog-to-digital conversion (ADCs), sampling, and quantization.</td>
+                    <td colspan="5" class="lecture-details-cell">Sensor fundamentals (IMU, acoustic, RF), ADCs, sampling, quantization.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">3</td>
                     <td class="date-cell">Sep 2</td>
                     <td class="topic-cell" onclick="toggleDetails(event, 3)">Signal Processing and Fourier Analysis</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 1 Released</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Fourier Transform Theory</a></div>
-                        <div class="reading-main"><a href="#">Time-Frequency Analysis</a></div>
-                        <div class="reading-optional">Optional: Advanced DSP Techniques</div>
-                    </td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-3" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">The Fourier Transform, spectrograms, and time-frequency analysis. Core operations: filtering and convolution.</td>
+                    <td colspan="5" class="lecture-details-cell">Fourier Transform, filtering, convolution, and time–frequency analysis.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">4</td>
                     <td class="date-cell">Sep 4</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 4)">In-Class Workshop 1: Smartphone Sensor Analysis</td>
-                    <td class="assignment-cell">
-                        <strong>Workshop Day</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Python Tutorial Guide</a></div>
-                        <div class="reading-main"><a href="#">MATLAB Mobile Toolbox</a></div>
-                        <div class="reading-optional">Optional: Advanced Sensor Fusion</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 4)">Signal Processing and Fourier Analysis</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-4" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Hands-on tutorial using Python/MATLAB to capture and analyze accelerometer and gyroscope data from students' own smartphones.</td>
-                </tr>
-                
-                <!-- Theme 2: Wireless Communication and Imaging -->
-                <tr class="topic-header">
-                    <td colspan="5">WIRELESS COMMUNICATION AND IMAGING</td>
+                    <td colspan="5" class="lecture-details-cell">Windows, spectra, and practical discrete-time processing.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">5</td>
                     <td class="date-cell">Sep 9</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 5)">Wireless Propagation & Communication</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">OFDM & Wi-Fi Fundamentals</a></div>
-                        <div class="reading-main"><a href="#">Bluetooth & Backscatter Systems</a></div>
-                        <div class="reading-optional">Optional: Advanced Propagation Models</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 5)">Signal Processing and Fourier Analysis (cont.)</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-5" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">How radio waves travel, reflect, and scatter. Introduction to OFDM, Wi-Fi, and Bluetooth. Brief overview of Backscatter and RFID systems.</td>
+                    <td colspan="5" class="lecture-details-cell">Applications to real sensor data streams.</td>
                 </tr>
                 
-                <tr class="expandable-row">
+                <tr class="expandable-row workshop-row">
                     <td class="lecture-number">6</td>
                     <td class="date-cell">Sep 11</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 6)">Wireless Localization and Ranging</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">RSS-based Localization</a></div>
-                        <div class="reading-main"><a href="#">Time-of-Flight Techniques</a></div>
-                        <div class="reading-optional">Optional: Advanced Ranging Methods</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 6)">In-Class Workshop 1: Smartphone Sensor Analysis</td>
+                    <td class="assignment-cell"><strong>Homework 1 Released</strong> &nbsp; <span class="pill workshop">Workshop</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-6" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Techniques for localization: Received Signal Strength (RSS), Time-of-Flight (ToF).</td>
+                    <td colspan="5" class="lecture-details-cell">Hands-on capture and analysis of IMU data.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">7</td>
                     <td class="date-cell">Sep 16</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 7)">Wireless Imaging I: Principles & Physics-Informed AI</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Wireless Imaging Fundamentals</a></div>
-                        <div class="reading-main"><a href="#">Physics-Informed Neural Networks</a></div>
-                        <div class="reading-optional">Optional: Inverse Problem Theory</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 7)">IMU Systems, Sensor fusion, Filtering</td>
+                    <td class="assignment-cell"><strong>Project Proposal Due</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-7" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Introduction to imaging using wireless signals. Topics include inverse problems and physics-informed neural networks (PINNs).</td>
+                    <td colspan="5" class="lecture-details-cell">State estimation; complementary and Kalman filtering.</td>
                 </tr>
                 
                 <tr class="expandable-row">
                     <td class="lecture-number">8</td>
                     <td class="date-cell">Sep 18</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 8)">Wireless Imaging II: Advanced Models</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 1 Due</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Neural Radiance Fields (NeRF)</a></div>
-                        <div class="reading-main"><a href="#">Diffusion Models for Imaging</a></div>
-                        <div class="reading-optional">Optional: State-of-the-art Techniques</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 8)">Aliasing and Freq Shifting</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-8" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Exploring state-of-the-art techniques like Neural Radiance Fields (NeRF) and diffusion models for imaging.</td>
+                    <td colspan="5" class="lecture-details-cell">Sampling pitfalls; heterodyning; anti-aliasing practice.</td>
                 </tr>
-                
-                <!-- Theme 3: On-Device Intelligence & Project Preparation -->
+
+                <!-- Theme 2: Spatial Sensing & Computing -->
                 <tr class="topic-header">
-                    <td colspan="5">ON-DEVICE INTELLIGENCE & PROJECT PREPARATION</td>
+                    <td colspan="5">SPATIAL SENSING AND COMPUTING</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">9</td>
                     <td class="date-cell">Sep 23</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 9)">Energy Harvesting & Intermittent Computing</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">RF Energy Harvesting</a></div>
-                        <div class="reading-main"><a href="#">Intermittent Computing Models</a></div>
-                        <div class="reading-optional">Optional: Solar and Ambient Energy</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 9)">Wave Propagation & Ranging</td>
+                    <td class="assignment-cell"><strong>Homework 1 Due • Homework 2 Released</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-9" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Powering devices from ambient sources (RF, solar). Programming models for computers that operate with unstable power.</td>
+                    <td colspan="5" class="lecture-details-cell">Path loss, multipath, ToF/phase ranging (RF & acoustics).</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">10</td>
                     <td class="date-cell">Sep 25</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 10)">On-Device AI: TinyML & Optimization</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">TinyML Fundamentals</a></div>
-                        <div class="reading-main"><a href="#">Model Compression Techniques</a></div>
-                        <div class="reading-optional">Optional: Quantization & Pruning</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 10)">Doppler Effect</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-10" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Benefits of edge AI. Model compression techniques including quantization, pruning, and knowledge distillation.</td>
+                    <td colspan="5" class="lecture-details-cell">Velocity sensing, gesture tracking, vital-sign monitoring.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">11</td>
                     <td class="date-cell">Sep 30</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 11)">LLMs, Chatbots, and Final Project Brainstorming</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Large Language Models Overview</a></div>
-                        <div class="reading-main"><a href="#">LLMs in Mobile Systems</a></div>
-                        <div class="reading-optional">Optional: Chatbot Implementation</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 11)">Arrays, Beamforming, Spatial Sensing</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-11" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">The rise of Large Language Models (LLMs) and their role in intelligent systems. Brainstorming session for final project ideas.</td>
+                    <td colspan="5" class="lecture-details-cell">Array fundamentals, spatial filtering, DoA estimation.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">12</td>
                     <td class="date-cell">Oct 2</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 12)">Sensing for Robotics & AR/VR</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 2 Released</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Robot Navigation Systems</a></div>
-                        <div class="reading-main"><a href="#">AR/VR Sensing Technologies</a></div>
-                        <div class="reading-optional">Optional: </div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 12)">Arrays, Beamforming, Spatial Sensing (cont.)</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-12" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">How mobile sensing technologies enable robot navigation and create immersive Augmented and Virtual Reality experiences.</td>
+                    <td colspan="5" class="lecture-details-cell">PCA/SVD views, synthetic apertures, array design.</td>
                 </tr>
-                
-                <!-- Theme 4: Advanced Sensing Systems -->
-                <tr class="topic-header">
-                    <td colspan="5">ADVANCED SENSING SYSTEMS</td>
-                </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">13</td>
                     <td class="date-cell">Oct 7</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 13)">Acoustic Ranging & Doppler Effect</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Acoustic Distance measurement</a></div>
-                        <div class="reading-main"><a href="#">Doppler Effect Applications</a></div>
-                        <div class="reading-optional">Optional: Vital Sign Detection</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 13)">Wireless Localization</td>
+                    <td class="assignment-cell"><strong>Homework 2 Due</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-13" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Using sound to measure distance and detect motion, gestures, and even vital signs.</td>
+                    <td colspan="5" class="lecture-details-cell">Triangulation, fingerprinting, AoA/TDoA, error sources.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">14</td>
                     <td class="date-cell">Oct 9</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 14)">Microphone Arrays & Beamforming</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Microphone Array Theory</a></div>
-                        <div class="reading-main"><a href="#">Beamforming Algorithms</a></div>
-                        <div class="reading-optional">Optional: Speaker Separation</div>
-                    </td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 14)">Wireless Imaging</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-14" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Using multiple microphones to focus on a sound source, cancel noise, and separate speakers.</td>
+                    <td colspan="5" class="lecture-details-cell">Inverse problems to learned RF/acoustic reconstructions.</td>
                 </tr>
-                
-                <tr class="expandable-row">
-                    <td class="lecture-number">15</td>
+
+                <!-- Holiday -->
+                <tr class="holiday-row">
+                    <td class="lecture-number"></td>
                     <td class="date-cell">Oct 14</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 15)">In-Class Workshop 2: Hands-On TinyML</td>
-                    <td class="assignment-cell">
-                        <strong>Workshop Day</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">TinyML Tutorial</a></div>
-                        <div class="reading-main"><a href="#">Raspberry Pi Pico Guide</a></div>
-                        <div class="reading-optional">Optional: Edge AI Optimization</div>
-                    </td>
+                    <td class="topic-cell">Fall Recess</td>
+                    <td class="assignment-cell"><span class="pill holiday">No class — Holiday</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
+                </tr>
+
+                <tr class="expandable-row assessment-row">
+                    <td class="lecture-number">15</td>
+                    <td class="date-cell">Oct 16</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 15)">Midterm Exam (In-Class)</td>
+                    <td class="assignment-cell"><strong>Midterm Exam</strong> &nbsp; <span class="pill exam">Assessment</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-15" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Activity using a Raspberry Pi Pico or similar board to run a live keyword-spotting model, demonstrating on-device AI in action.</td>
+                    <td colspan="5" class="lecture-details-cell">Covers Lectures 1–14.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">16</td>
-                    <td class="date-cell">Oct 16</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 16)">NextG I: 5G & Millimeter-Wave Sensing</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 2 Due</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">5G Technology Overview</a></div>
-                        <div class="reading-main"><a href="#">Millimeter-Wave Sensing</a></div>
-                        <div class="reading-optional">Optional: High-Resolution Imaging</div>
-                    </td>
+                    <td class="date-cell">Oct 21</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 16)">Structure Assisted Sensing</td>
+                    <td class="assignment-cell"><strong>Homework 3 Released</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-16" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">The technology behind 5G and its use of high-frequency bands for high-resolution imaging and sensing.</td>
+                    <td colspan="5" class="lecture-details-cell">Using scene priors, sparsity, and physics for efficiency.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">17</td>
-                    <td class="date-cell">Oct 21</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 17)">NextG II: Terahertz & Smart Surfaces</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Terahertz Communication</a></div>
-                        <div class="reading-main"><a href="#">Reconfigurable Intelligent Surfaces</a></div>
-                        <div class="reading-optional">Optional: Ultra-Fast Networks</div>
-                    </td>
+                    <td class="date-cell">Oct 23</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 17)">Wireless Imaging – Diffusion, NeRF</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-17" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Exploring the Terahertz gap for future ultra-fast communication and Reconfigurable Intelligent Surfaces (RIS).</td>
+                    <td colspan="5" class="lecture-details-cell">Generative models for reconstruction.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">18</td>
-                    <td class="date-cell">Oct 23</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 18)">Midterm Exam (In-Class)</td>
-                    <td class="assignment-cell">
-                        <strong>Midterm Exam</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <span class="placeholder">Study materials will be provided</span>
-                    </td>
+                    <td class="date-cell">Oct 28</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 18)">NextG I: 5G & Millimeter-Wave Sensing</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-18" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">In-class midterm examination covering all material from lectures 1-17.</td>
+                    <td colspan="5" class="lecture-details-cell">High-frequency sensing, beam steering, resolution gains.</td>
                 </tr>
-                
-                <!-- Theme 5: Applications, Privacy, and Future Directions -->
+
+                <!-- Theme 3: On-Device Intelligence -->
                 <tr class="topic-header">
-                    <td colspan="5">APPLICATIONS, PRIVACY, AND FUTURE DIRECTIONS</td>
+                    <td colspan="5">ON-DEVICE INTELLIGENCE</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">19</td>
-                    <td class="date-cell">Oct 28</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 19)">Mobile Health Sensing</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Smartphone Health Monitoring</a></div>
-                        <div class="reading-main"><a href="#">Digital Phenotyping</a></div>
-                        <div class="reading-optional">Optional: Wearable Device Integration</div>
-                    </td>
+                    <td class="date-cell">Oct 30</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 19)">Project Progress Discussion</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-19" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Using smartphones and wearables for physiological sensing (e.g., heart rate, respiration). Introduction to digital phenotyping.</td>
+                    <td colspan="5" class="lecture-details-cell">Milestone check-in and integration plans.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">20</td>
-                    <td class="date-cell">Oct 30</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 20)">Applied Machine Learning for Health</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 3 Released</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Health Screening Applications</a></div>
-                        <div class="reading-main"><a href="#">Sensor Data for Diagnosis</a></div>
-                        <div class="reading-optional">Optional: Validation Challenges</div>
-                    </td>
+                    <td class="date-cell">Nov 4</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 20)">Energy Harvesting & Intermittent Computing</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-20" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Case studies: Using sensor data to screen for health conditions. Challenges in building and validating mobile health applications.</td>
+                    <td colspan="5" class="lecture-details-cell">Power from ambient sources; intermittent-safe programming.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">21</td>
-                    <td class="date-cell">Nov 4</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 21)">Security and Privacy in Sensing Systems</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Privacy-Preserving Techniques</a></div>
-                        <div class="reading-main"><a href="#">Sensor Data Security</a></div>
-                        <div class="reading-optional">Optional: Privacy-by-Design</div>
-                    </td>
+                    <td class="date-cell">Nov 6</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 21)">On-Device AI: TinyML & Optimization</td>
+                    <td class="assignment-cell"><strong>Homework 3 Due</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-21" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">The privacy risks of collecting continuous sensor data and techniques for building privacy-preserving systems.</td>
+                    <td colspan="5" class="lecture-details-cell">Quantization, pruning, distillation, deployment toolchains.</td>
                 </tr>
-                
-                <tr class="expandable-row">
+
+                <tr class="expandable-row workshop-row">
                     <td class="lecture-number">22</td>
-                    <td class="date-cell">Nov 6</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 22)">Deploying Mobile Systems: Case Studies</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Real-World Deployment</a></div>
-                        <div class="reading-main"><a href="#">Research to Production</a></div>
-                        <div class="reading-optional">Optional: Success Stories</div>
-                    </td>
+                    <td class="date-cell">Nov 11</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 22)">In-Class Workshop 2: Hands-On TinyML</td>
+                    <td class="assignment-cell"><span class="pill workshop">Workshop</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-22" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">A look at the challenges and successes of translating research into real-world, deployed systems.</td>
+                    <td colspan="5" class="lecture-details-cell">Live edge-ML demo on microcontroller hardware.</td>
                 </tr>
-                
+
+                <!-- Theme 4: Applications & Intelligent Mobile Systems -->
+                <tr class="topic-header">
+                    <td colspan="5">APPLICATIONS AND INTELLIGENT MOBILE SYSTEMS</td>
+                </tr>
+
                 <tr class="expandable-row">
                     <td class="lecture-number">23</td>
-                    <td class="date-cell">Nov 11</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 23)">Guest Lecture / Special Topics</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Industry Expert Presentation</a></div>
-                        <div class="reading-main"><a href="#">Recent Conference Topics</a></div>
-                        <div class="reading-optional">Optional: Advanced Research</div>
-                    </td>
+                    <td class="date-cell">Nov 13</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 23)">Mobile Health Sensing</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-23" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">A lecture from an industry or academic expert, or a deep dive into a topic from a recent top-tier conference.</td>
+                    <td colspan="5" class="lecture-details-cell">Physiological sensing; biomarkers; study design.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">24</td>
-                    <td class="date-cell">Nov 13</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 24)">Final Project Work Session & Q&A</td>
-                    <td class="assignment-cell">
-                        <strong>Assignment 3 Due</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Project Guidelines</a></div>
-                        <div class="reading-main"><a href="#">Q&A Resources</a></div>
-                        <div class="reading-optional">Optional: Project Examples</div>
-                    </td>
+                    <td class="date-cell">Nov 18</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 24)">Mobile Health Sensing (cont.)</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-24" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Structured in-class time for students to ask questions and get direct feedback on their final projects.</td>
+                    <td colspan="5" class="lecture-details-cell">Validation, privacy, and deployment considerations.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">25</td>
-                    <td class="date-cell">Nov 18</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 25)">Advanced ML for Sensor Systems</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Self-Supervised Learning</a></div>
-                        <div class="reading-main"><a href="#">Federated Learning</a></div>
-                        <div class="reading-optional">Optional: Generative Models</div>
-                    </td>
+                    <td class="date-cell">Nov 20</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 25)">Security and Privacy</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-25" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Exploring advanced topics like self-supervised learning, federated learning, and generative models for sensor data.</td>
+                    <td colspan="5" class="lecture-details-cell">Threat models, privacy-by-design, secure sensing pipelines.</td>
                 </tr>
-                
+
                 <tr class="expandable-row">
                     <td class="lecture-number">26</td>
-                    <td class="date-cell">Nov 20</td>
-                    <td class="topic-cell" onclick="toggleDetails(event, 26)">Course Wrap-up & Future Research</td>
-                    <td class="assignment-cell">
-                        <span class="placeholder">-</span>
-                    </td>
-                    <td class="reading-cell">
-                        <div class="reading-main"><a href="#">Course Summary</a></div>
-                        <div class="reading-main"><a href="#">Future Research Directions</a></div>
-                        <div class="reading-optional">Optional: Open Problems</div>
-                    </td>
+                    <td class="date-cell">Nov 25</td>
+                    <td class="topic-cell" onclick="toggleDetails(event, 26)">Security and Privacy (cont.)</td>
+                    <td class="assignment-cell"><span class="placeholder">-</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-26" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">A summary of the course's key themes and a look ahead at the open problems and future of intelligent mobile systems.</td>
+                    <td colspan="5" class="lecture-details-cell">Differential privacy, secure enclaves, auditing.</td>
                 </tr>
-                
-                <!-- Theme 6: Final Projects -->
+
+                <!-- Holiday -->
+                <tr class="holiday-row">
+                    <td class="lecture-number"></td>
+                    <td class="date-cell">Nov 27</td>
+                    <td class="topic-cell">Thanksgiving Break</td>
+                    <td class="assignment-cell"><span class="pill holiday">No class — Holiday</span></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
+                </tr>
+
+                <!-- Final Projects -->
                 <tr class="topic-header">
                     <td colspan="5">FINAL PROJECTS</td>
                 </tr>
-                
-                <tr class="expandable-row">
+
+                <tr class="expandable-row assessment-row">
                     <td class="lecture-number">27</td>
-                    <td class="date-cell">Nov 25</td>
+                    <td class="date-cell">Dec 2</td>
                     <td class="topic-cell" onclick="toggleDetails(event, 27)">Final Project Presentations I</td>
-                    <td class="assignment-cell">
-                        <strong>Final Presentations</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <span class="placeholder">-</span>
-                    </td>
+                    <td class="assignment-cell"><strong>Final Presentations</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-27" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Student groups present their final projects to the class.</td>
+                    <td colspan="5" class="lecture-details-cell">Student groups present projects (session I).</td>
                 </tr>
-                
-                <tr class="expandable-row">
+
+                <tr class="expandable-row assessment-row">
                     <td class="lecture-number">28</td>
-                    <td class="date-cell">Dec 2</td>
+                    <td class="date-cell">Dec 4</td>
                     <td class="topic-cell" onclick="toggleDetails(event, 28)">Final Project Presentations II</td>
-                    <td class="assignment-cell">
-                        <strong>Final Presentations</strong>
-                    </td>
-                    <td class="reading-cell">
-                        <span class="placeholder">-</span>
-                    </td>
+                    <td class="assignment-cell"><strong>Final Presentations</strong></td>
+                    <td class="reading-cell"><span class="placeholder">&nbsp;</span></td>
                 </tr>
                 <tr id="details-28" class="lecture-details-row" style="display: none;">
-                    <td colspan="5" class="lecture-details-cell">Student groups present their final projects to the class.</td>
+                    <td colspan="5" class="lecture-details-cell">Student groups present projects (session II) and wrap-up.</td>
                 </tr>
+
             </tbody>
         </table>
     </div>
@@ -605,13 +443,13 @@
         <h3>Course Policies and Resources.</h3>
         
         <h4>Rice Honor Code</h4>
-        <p>All students must uphold the Rice Honor Code standards established when you matriculated at Rice. If you need clarification on academic integrity expectations, procedures, or student rights, consult the <a href="http://honor.rice.edu/honor-system-handbook/" target="_blank">Honor System Handbook</a>. This resource details what constitutes academic misconduct and outlines the resolution process.</p>
+        <p>All students must uphold the Rice Honor Code standards established when you matriculated at Rice. If you need clarification on academic integrity expectations, procedures, or student rights, consult the <a href="http://honor.rice.edu/honor-system-handbook/" target="_blank">Honor System Handbook</a>.</p>
         
         <h4>Disability Resource Center</h4>
         <p>Any student with a documented disability needing academic accommodations should: 1) visit the Disabilities Resource Center (DRC) to ensure required documentation is on file, and 2) speak with the instructor as soon as possible. The DRC is located in Allen Center, Room 111 / adarice@rice.edu / x5841.</p>
         
         <h4>Mental Health Statement</h4>
-        <p>Student wellbeing and mental health are important. If personal challenges are interfering with your ability to complete coursework, please contact the Wellbeing and Counseling Center for support. Rice offers free mental health services through the Wellbeing and Counseling Center to help students navigate personal difficulties that may impact their academic or personal wellbeing. Students experiencing significant stress, sadness, or anxiety can receive assistance from the Student Wellbeing Office or Rice Counseling Center. The Wellbeing and Counseling Center operates from the Gibbs Wellness Center and provides 24/7 support at 713-348-3311.</p>
+        <p>Student wellbeing and mental health are important. If personal challenges are interfering with your ability to complete coursework, please contact the Wellbeing and Counseling Center for support. 24/7 support: 713-348-3311.</p>
         
         <h4>Updates to the Course</h4>
         <p>Information in this syllabus may be subject to change with reasonable advance notice as appropriate.</p>
