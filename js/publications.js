@@ -1,5 +1,31 @@
 const publications = [
     {
+        title: "RadarSFD: Single-Frame Diffusion with Pretrained Priors for Radar Point Clouds",
+        authors: ["B. Zhao", "N. Garg"],
+        venue: "ICRA 2026",
+        image: "./assets/overview_figures/radarsfd.png",
+        links: [
+        { text: "Paper (coming soon)", url: "#" },
+            // { text: "Video", url: "#" },
+            // { text: "Model (coming soon)", url: "#" },
+            // { text: "Dataset (coming soon)", url: "#" }
+        ],
+        awards: []
+    },
+    {
+        title: "AMULET: Acoustic Metastructure for Direction-of-Arrival Estimation Underwater using a Single Hydrophone",
+        authors: ["A. Bergey", "N. Garg", "A. Gadre"],
+        venue: "Sensys 2026",
+        image: "./assets/overview_figures/amulet.jpg",
+        links: [
+        { text: "Paper (coming soon)", url: "#" },
+            // { text: "Video", url: "#" },
+            // { text: "Code", url: "#" },
+            // { text: "Dataset", url: "#" }
+        ],
+        awards: []
+    },
+    {
         title: "Large Network UWB Localization: Algorithms and Implementation",
         authors: ["N. Garg", "I. Shahid", "R. K. Sheshadri", "K. Sundaresan", "N. Roy"],
         venue: "NSDI 2025",
