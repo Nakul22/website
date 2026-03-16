@@ -151,6 +151,12 @@ a:focus {
     text-decoration: underline;
 }
 
+.news-new {
+    color: #b45309;
+    font-weight: 700;
+    margin-right: 0.25rem;
+}
+
 /* -----------------------------
    Navigation Styles
 ----------------------------- */

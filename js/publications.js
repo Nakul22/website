@@ -5,7 +5,9 @@ const publications = [
         venue: "ICRA 2026",
         image: "./assets/overview_figures/radarsfd.png",
         links: [
-        { text: "Paper (coming soon)", url: "#" },
+            { text: "Paper", url: "assets/papers/radarsfd_icra2026_nakul.pdf" },
+            { text: "Code", url: "https://github.com/phi-lab-rice/RadarSFD" },
+            { text: "Project Page", url: "https://phi-lab-rice.github.io/RadarSFD/" },
             // { text: "Video", url: "#" },
             // { text: "Model (coming soon)", url: "#" },
             // { text: "Dataset (coming soon)", url: "#" }
@@ -18,7 +20,7 @@ const publications = [
         venue: "Sensys 2026",
         image: "./assets/overview_figures/amulet.jpg",
         links: [
-        { text: "Paper (coming soon)", url: "#" },
+        { text: "Paper (to appear)", url: "#" },
             // { text: "Video", url: "#" },
             // { text: "Code", url: "#" },
             // { text: "Dataset", url: "#" }
