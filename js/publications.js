@@ -5,11 +5,11 @@ const publications = [
         venue: "ICRA 2026",
         image: "./assets/overview_figures/radarsfd.png",
         links: [
+            { text: "Project Page", url: "https://phi-lab-rice.github.io/RadarSFD/" },
             { text: "Paper", url: "assets/papers/radarsfd_icra2026_nakul.pdf" },
             { text: "Code", url: "https://github.com/phi-lab-rice/RadarSFD" },
-            { text: "Project Page", url: "https://phi-lab-rice.github.io/RadarSFD/" },
+            { text: "Weigths", url: "https://huggingface.co/Bin-0815/RadarSFD" },
             // { text: "Video", url: "#" },
-            // { text: "Model (coming soon)", url: "#" },
             // { text: "Dataset (coming soon)", url: "#" }
         ],
         awards: []
@@ -114,7 +114,7 @@ const publications = [
             { text: "Paper", url: "assets/papers/owlet_mobisys2021_nakul.pdf" },
             // { text: "Slides", url: "assets/papers/slides_owlet_mobisys21.pptx" },
             { text: "Video", url: "https://youtu.be/pQqwYSWLHug" },
-            { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
+            // { text: "Talk", url: "https://youtu.be/EFPvRxkjNuM" },
             { text: "Code", url: "https://github.com/Nakul22/Owlet_Mobisys21" }
         ],
         awards: ["Best Demo Award", "ACM GetMobile Cover"]
@@ -127,7 +127,7 @@ const publications = [
         links: [
             { text: "Paper", url: "assets/papers/dopplerdodge_hotmobile20_nakul.pdf" },
             // { text: "Slides", url: "assets/papers/slides_dopplerdodge_hotmobile20.pptx" },
-            { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
+            // { text: "Talk", url: "https://youtu.be/d1zxUGb-2bM" }
         ],
         awards: []
     },
