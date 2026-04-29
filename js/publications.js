@@ -20,7 +20,7 @@ const publications = [
         venue: "Sensys 2026",
         image: "./assets/overview_figures/amulet.jpg",
         links: [
-        { text: "Paper (to appear)", url: "#" },
+        { text: "Paper", url: "assets/papers/amulet_sensys2026_nakul.pdf" },
             // { text: "Video", url: "#" },
             // { text: "Code", url: "#" },
             // { text: "Dataset", url: "#" }
@@ -46,7 +46,7 @@ const publications = [
         venue: "ICML 2025",
         image: "./assets/overview_figures/spatial_audio_llm.png",
         links: [
-            { text: "Paper", url: "https://arxiv.org/abs/2504.08907"},
+            { text: "Paper", url: "assets/papers/sing_icml2025_nakul.pdf" },
             // { text: "Slides", url: "assets/papers/slides_spatial_audio_llm.pptx" },
             // { text: "Video", url: "https://youtu.be/2g0v1q3X4aE" },
             // { text: "Code", url: "#" }
