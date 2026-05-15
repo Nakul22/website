@@ -1,5 +1,12 @@
 const awards = [
     {
+        title: "Best Demo Award (Project Amulet)",
+        year: "2026",
+        description: "Amulet enables underwater angle-of-arrival estimation using a single hydrophone paired with a bio-inspired metastructure.",
+        image: "./assets/awards/sensys_2026.png",
+        link: "https://sensys.acm.org/2026/"
+    },
+    {
         title: "Marconi Society Young Scholar Award",
         year: "2024",
         description: "Marconi Society recognizes outstanding young scientists and engineers anywhere in the world.",
