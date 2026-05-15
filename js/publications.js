@@ -25,7 +25,7 @@ const publications = [
             // { text: "Code", url: "#" },
             // { text: "Dataset", url: "#" }
         ],
-        awards: []
+        awards: ["Best Demo Award"]
     },
     {
         title: "Large Network UWB Localization: Algorithms and Implementation",
