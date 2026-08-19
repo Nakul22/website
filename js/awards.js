@@ -1,5 +1,12 @@
 const awards = [
     {
+        title: "ACM SIGMOBILE Dissertation Award",
+        year: "2026",
+        description: "Awarded by ACM SIGMOBILE for outstanding doctoral dissertation research in the field of mobile computing and networking.",
+        image: "./assets/awards/dissertation_award.jpg",
+        link: "https://www.sigmobile.org/grav/awards/phd-thesis-award"
+    },
+    {
         title: "Best Demo Award (Project Amulet)",
         year: "2026",
         description: "Amulet enables underwater angle-of-arrival estimation using a single hydrophone paired with a bio-inspired metastructure.",
