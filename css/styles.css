@@ -287,7 +287,7 @@ a:focus {
 }
 
 .pub-image {
-    flex: 0 0 350px;
+    flex: 0 0 220px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -296,9 +296,8 @@ a:focus {
 }
 
 .pub-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
+    max-width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
 }
@@ -379,18 +378,14 @@ a:focus {
     
     /* Publications */
     .pub-image {
-        flex: 0 0 350px;
+        flex: 0 0 220px;
     }
 }
 
 @media (max-width: 1024px) {
     /* Publications */
     .pub-image {
-        flex: 0 0 300px;
-    }
-    
-    .pub-image img {
-        height: 200px;
+        flex: 0 0 190px;
     }
 }
 
@@ -459,9 +454,8 @@ a:focus {
     }
     
     .pub-image img {
-        width: 100%;
-        height: 140px;
-        object-fit: contain;
+        max-width: 100%;
+        height: auto;
         margin: 0;
         padding: 0;
         display: block;

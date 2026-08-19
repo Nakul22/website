@@ -1,5 +1,18 @@
 const publications = [
     {
+        title: "GRADE: Single-Frame Generative Radar Depth Estimation Under Visual Degradation",
+        authors: ["B. Zhao", "P. Chiou", "N. Garg"],
+        venue: "MobiCom 2026",
+        image: "./assets/overview_figures/grade.png",
+        links: [
+            { text: "Project Page", url: "https://phi-lab-rice.github.io/grade/" },
+            { text: "Paper", url: "https://phi-lab-rice.github.io/grade/" },
+            { text: "Code", url: "https://phi-lab-rice.github.io/grade/" },
+            { text: "Weigths", url: "https://phi-lab-rice.github.io/grade/" },
+        ],
+        awards: []
+    },
+    {
         title: "RadarSFD: Single-Frame Diffusion with Pretrained Priors for Radar Point Clouds",
         authors: ["B. Zhao", "N. Garg"],
         venue: "ICRA 2026",
