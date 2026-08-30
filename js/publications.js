@@ -5,9 +5,9 @@ const publications = [
         venue: "MobiCom 2026",
         image: "./assets/overview_figures/grade.png",
         links: [
-            { text: "Project Page", url: "https://phi-lab-rice.github.io/grade/" },
-            { text: "Paper", url: "https://phi-lab-rice.github.io/grade/" },
-            { text: "Code", url: "https://phi-lab-rice.github.io/grade/" },
+            { text: "Project Page", url: "https://phi-lab-rice.github.io/GRADE/" },
+            { text: "Paper", url: "https://phi-lab-rice.github.io/GRADE/" },
+            { text: "Code", url: "https://github.com/phi-lab-rice/GRADE" },
             { text: "Weigths", url: "https://phi-lab-rice.github.io/grade/" },
         ],
         awards: []
